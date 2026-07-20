@@ -1,0 +1,333 @@
+﻿<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patient Success Stories | Florida Integrative Medical Center</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Outfit', 'sans-serif'],
+                        inter: ['Inter', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    },
+                    colors: {
+                        teal: {
+                            50: '#f4fbfc',
+                            100: '#eaf6f8',
+                            400: '#5ac6d6',
+                            500: '#38b2c6',
+                            600: '#047b8e',
+                            700: '#036170',
+                        },
+                        navy: {
+                            800: '#1e293b',
+                            900: '#0f172a',
+                        }
+                    },
+                    boxShadow: {
+                        'premium': '0 12px 40px -12px rgba(4, 123, 142, 0.08)',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="overflow-x-hidden font-sans text-gray-800 antialiased bg-[#fcfdfd] flex flex-col min-h-screen">
+
+        <!-- Header -->
+    <header class="w-full bg-white shadow-sm relative z-50 pt-4 pb-4 px-6 md:px-16 flex justify-between items-center mx-auto">
+        <div class="flex items-center gap-4">
+            <a href="index.html" class="flex items-center gap-4">
+                <img src="logo.png" alt="Florida Integrative Medical Center" onerror="this.src='logow.png'" class="w-16 md:w-20 h-auto">
+                <div class="hidden md:block">
+                    <h1 class="text-xl md:text-2xl font-serif font-bold text-[#00657e] leading-tight tracking-wide">FLORIDA INTEGRATIVE<br><span class="text-gray-500">MEDICAL CENTER</span></h1>
+                </div>
+            </a>
+        </div>
+        
+        <!-- Mobile Menu Toggle -->
+        <div class="flex flex-col items-center cursor-pointer relative" onclick="document.getElementById('mobile-menu').classList.toggle('hidden')">
+            <div class="text-[#00657e] p-2 flex items-center justify-center hover:opacity-80 transition-all duration-300">
+                <i class="fa-solid fa-bars text-3xl md:text-4xl"></i>
+            </div>
+            
+            <!-- Mobile Menu Dropdown -->
+            <div id="mobile-menu" class="hidden absolute top-14 right-0 w-64 bg-white/95 backdrop-blur-xl shadow-2xl rounded-2xl p-6 z-50 border border-teal-100 flex flex-col space-y-4 text-left">
+                <a href="index.html" class="text-[#003a4d] font-bold text-base hover:text-teal-600 transition border-b border-gray-100 pb-2">Home</a>
+                <a href="conditions.html" class="text-[#003a4d] font-bold text-base hover:text-teal-600 transition border-b border-gray-100 pb-2">Conditions</a>
+                  <a href="personalized-care.html" class="text-[#003a4d] font-bold text-base hover:text-teal-600 transition border-b border-gray-100 pb-2">Personalized Care</a>
+                <a href="iv-room.html" class="text-[#003a4d] font-bold text-base hover:text-teal-600 transition border-b border-gray-100 pb-2">IV Room</a>
+                  <a href="lyme-disease-care.html" class="text-[#003a4d] font-bold text-base hover:text-teal-600 transition border-b border-gray-100 pb-2">Lyme Disease Care</a>
+                <a href="therapies.html" class="text-[#003a4d] font-bold text-base hover:text-teal-600 transition border-b border-gray-100 pb-2 hidden">Therapies</a>
+                
+                <!-- Therapies Dropdown -->
+                <div class="border-b border-gray-100 pb-2">
+                    <button class="text-[#003a4d] font-bold text-base hover:text-teal-600 transition w-full text-left flex justify-between items-center" onclick="event.stopPropagation(); document.getElementById('therapies-menu-list').classList.toggle('hidden')">
+                        Therapies <i class="fa-solid fa-chevron-down text-xs"></i>
+                    </button>
+                    <div id="therapies-menu-list" class="hidden flex-col space-y-3 mt-3 pl-4 border-l-2 border-teal-100 max-h-48 overflow-y-auto custom-scrollbar">
+                        <a href="faq.html" class="block text-sm text-[#003a4d] hover:text-teal-600 transition">FAQ</a>
+                        <a href="eboo.html" class="block text-sm text-[#003a4d] hover:text-teal-600 transition">EBOO</a>
+                        <a href="ebo2.html" class="block text-sm text-[#003a4d] hover:text-teal-600 transition">EBO2</a>
+                        <a href="ozone-therapy.html" class="block text-sm text-[#003a4d] hover:text-teal-600 transition">Ozone Therapy</a>
+                        <a href="ubi-therapy.html" class="block text-sm text-[#003a4d] hover:text-teal-600 transition">UBI Therapy</a>
+                        <a href="vitamin-c.html" class="block text-sm text-[#003a4d] hover:text-teal-600 transition">Vitamin C</a>
+                        <a href="myers-cocktail.html" class="block text-sm text-[#003a4d] hover:text-teal-600 transition">Myers Cocktail</a>
+                        <a href="flu-defense.html" class="block text-sm text-[#003a4d] hover:text-teal-600 transition">Flu Defense</a>
+                        <a href="vitality.html" class="block text-sm text-[#003a4d] hover:text-teal-600 transition">Vitality</a>
+                        <a href="glutathione.html" class="block text-sm text-[#003a4d] hover:text-teal-600 transition">Glutathione</a>
+                        <a href="egcg.html" class="block text-sm text-[#003a4d] hover:text-teal-600 transition">EGCG</a>
+                        <a href="migraine-defense.html" class="block text-sm text-[#003a4d] hover:text-teal-600 transition">Migraine Defense</a>
+                        <a href="chelation-therapy.html" class="block text-sm text-[#003a4d] hover:text-teal-600 transition">Chelation Therapy</a>
+                        <a href="ubi-with-ozone.html" class="block text-sm text-[#003a4d] hover:text-teal-600 transition">UBI with Ozone</a>
+                        <a href="5-pass-ozone.html" class="block text-sm text-[#003a4d] hover:text-teal-600 transition">5-Pass Ozone Therapy</a>
+                        <a href="iv-antibiotics.html" class="block text-sm text-[#003a4d] hover:text-teal-600 transition">IV Antibiotics</a>
+                        <a href="iv-iron.html" class="block text-sm text-[#003a4d] hover:text-teal-600 transition">IV Iron</a>
+                        <a href="silver-infusion.html" class="block text-sm text-[#003a4d] hover:text-teal-600 transition">Silver Infusion</a>
+                    </div>
+                </div>
+                <a href="about.html" class="text-[#003a4d] font-bold text-base hover:text-teal-600 transition border-b border-gray-100 pb-2">About</a>
+                <a href="team.html" class="text-[#003a4d] font-bold text-base hover:text-teal-600 transition border-b border-gray-100 pb-2">Meet Our Team</a>
+                <a href="testimonials.html" class="text-[#003a4d] font-bold text-base hover:text-teal-600 transition border-b border-gray-100 pb-2">Testimonials</a>
+                <a href="#contact-us" class="bg-teal-600 text-white text-center font-bold text-base py-2 rounded-xl hover:bg-teal-700 shadow-md transition mt-2">Book Now</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Page Title / Hero -->
+    <section class="bg-teal-50 py-20 lg:py-28 relative overflow-hidden border-b border-teal-100">
+        <!-- Subtle decorative element -->
+        <div class="absolute top-0 right-0 -mt-20 -mr-20 w-96 h-96 bg-teal-100 rounded-full mix-blend-multiply filter blur-3xl opacity-50"></div>
+        <div class="absolute bottom-0 left-0 -mb-20 -ml-20 w-72 h-72 bg-teal-200 rounded-full mix-blend-multiply filter blur-3xl opacity-30"></div>
+        
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+            <h1 class="text-4xl md:text-5xl lg:text-6xl font-serif font-semibold text-navy-900 mb-6 tracking-tight">Patient Success Stories</h1>
+            <p class="text-gray-600 text-lg md:text-xl font-inter leading-relaxed max-w-2xl mx-auto">Real experiences from individuals who have reclaimed their health and vitality through our functional and integrative approach.</p>
+        </div>
+    </section>
+
+    <!-- Testimonials Content -->
+    <main class="py-20 flex-grow relative z-10 -mt-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+            <!-- Featured Testimonial (Full Width) -->
+            <div class="bg-white rounded-xl shadow-premium p-8 md:p-12 mb-12 border border-gray-100 relative overflow-hidden flex flex-col md:flex-row gap-8 items-center">
+                <div class="absolute top-0 left-0 w-2 h-full bg-teal-600"></div>
+                <div class="md:w-1/3 flex-shrink-0 text-center md:text-left flex flex-col items-center md:items-start">
+                    <img src="https://flimc.com/wp-content/uploads/2026/04/Linda-Beggs.jpg" alt="Linda Beggs" class="w-32 h-32 rounded-full object-cover shadow-sm border-2 border-white ring-2 ring-teal-100 mb-6">
+                    <h3 class="text-2xl font-bold text-navy-900">Linda Beggs</h3>
+                    <p class="text-teal-600 font-semibold text-sm uppercase tracking-wider mb-2">Reclaimed Her Life</p>
+                    <div class="flex mt-1">
+                        <i class="fa-solid fa-star text-[#d4af37] text-xs mx-0.5"></i>
+                        <i class="fa-solid fa-star text-[#d4af37] text-xs mx-0.5"></i>
+                        <i class="fa-solid fa-star text-[#d4af37] text-xs mx-0.5"></i>
+                        <i class="fa-solid fa-star text-[#d4af37] text-xs mx-0.5"></i>
+                        <i class="fa-solid fa-star text-[#d4af37] text-xs mx-0.5"></i>
+                    </div>
+                </div>
+                <div class="md:w-2/3 relative">
+                    <i class="fa-solid fa-quote-left text-5xl text-teal-50 absolute -top-4 -left-6 z-0"></i>
+                    <div class="relative z-10 text-gray-700 font-serif italic text-lg leading-relaxed">
+                        <p class="mb-4">"I just want to thank the expert team at Florida Integrative Medical Center for their great care. I am living life to the fullest again! I had been sick for several years and my doctors didnâ€™t know what it was. By the time we arrived at our Florida home all my funeral plans were made. I was so weak that I slept all the time."</p>
+                        <p class="mb-4">"Dr Monhollon was able to determine I had Lymeâ€™s Disease as well as several infections. We were able to afford all the treatments he recommended. Now it is mid-November and I feel like a new person. I do many physical activities now on a regular basis."</p>
+                        <p class="font-semibold text-navy-900">"When I first arrived at Florida Integrative Medical Center I was hopeless. Now I have my life back! Thanks for all of the meticulous expert care I received."</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Standard Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+                
+                <!-- Courtney H. -->
+                <div class="bg-white rounded-xl shadow-premium p-8 border border-gray-100 flex flex-col justify-between h-full group transition-transform hover:-translate-y-1 duration-300">
+                    <div>
+                        <i class="fa-solid fa-quote-left text-3xl text-teal-100 mb-6 block"></i>
+                        <p class="text-gray-700 mb-8 font-inter font-light leading-loose">"Florida Integrative Medical Center gave me my life back. Iâ€™m not exaggerating. Before I came to FLIMC and got SOT, I was nearly bedridden. I couldnâ€™t function and was suffering terribly from Lyme and co-infections. As Iâ€™ve come for treatments at FLIMC, Iâ€™ve come to find that everyone is just as hospitable. They not only listen to me but they really fight for me. I have never met finer doctors, techs, and staff in my life. Now, as the SOT is starting to really take effect, I feel better than I have in YEARS. Iâ€™m functioning again."</p>
+                    </div>
+                    <div class="flex items-center mt-auto pt-6 border-t border-gray-50">
+                        <img src="https://flimc.com/wp-content/uploads/2025/05/Courtney-340x340-1.webp" alt="Courtney H." class="w-14 h-14 rounded-full object-cover mr-4 shadow-sm border border-gray-100">
+                        <div>
+                            <h4 class="font-bold text-navy-900 text-lg">Courtney H.</h4>
+                            <p class="text-teal-600 text-xs font-semibold uppercase tracking-wider">Functional Medicine Patient</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Prince Matharu -->
+                <div class="bg-white rounded-xl shadow-premium p-8 border border-gray-100 flex flex-col justify-between h-full group transition-transform hover:-translate-y-1 duration-300">
+                    <div>
+                        <i class="fa-solid fa-quote-left text-3xl text-teal-100 mb-6 block"></i>
+                        <p class="text-gray-700 mb-8 font-inter font-light leading-loose">"My name is Prince Matharu, and I had been dealing with Lyme, mold toxicity, severe immune dysregulation, and tissue degeneration. I went from specialist to specialist without lasting relief. I discovered FLIMC while researching SOT treatments. Unlike other places that charged high fees just for a consultation, FLIMC made me feel supported from the start. Everyone at FLIMC is friendly, caring, and focused on safety. I highly encourage anyone with complex chronic illnesses to reach out to Florida Integrative Medical Center."</p>
+                    </div>
+                    <div class="flex items-center mt-auto pt-6 border-t border-gray-50">
+                        <img src="https://flimc.com/wp-content/uploads/2025/05/prince-340x340-1.png" alt="Prince Matharu" class="w-14 h-14 rounded-full object-cover mr-4 shadow-sm border border-gray-100">
+                        <div>
+                            <h4 class="font-bold text-navy-900 text-lg">Prince Matharu</h4>
+                            <p class="text-teal-600 text-xs font-semibold uppercase tracking-wider">SOT Therapy Patient</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Lori B. -->
+                <div class="bg-white rounded-xl shadow-premium p-8 border border-gray-100 flex flex-col justify-between h-full group transition-transform hover:-translate-y-1 duration-300">
+                    <div>
+                        <i class="fa-solid fa-quote-left text-3xl text-teal-100 mb-6 block"></i>
+                        <p class="text-gray-700 mb-8 font-inter font-light leading-loose">"I was diagnosed with late-stage Lyme in April 2007. I continued to relapse until 2019, always experiencing the same severe symptoms. I chose Florida Integrative Medical Center and Dr. Monhollon for this breakthrough therapy. Four months post-SOT, I tested negative for Borrelia and all my symptoms disappeared. I'm now powerwalking, going to the gym, enjoying the sun, sleeping well, and reconnecting with friends. Thank you, FLIMC and Dr. Monhollon, for giving me my life back!"</p>
+                    </div>
+                    <div class="flex items-center mt-auto pt-6 border-t border-gray-50">
+                        <img src="https://flimc.com/wp-content/uploads/2025/06/Lori-B.webp" alt="Lori B." class="w-14 h-14 rounded-full object-cover mr-4 shadow-sm border border-gray-100">
+                        <div>
+                            <h4 class="font-bold text-navy-900 text-lg">Lori B.</h4>
+                            <p class="text-teal-600 text-xs font-semibold uppercase tracking-wider">Former Lyme Warrior</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Jennifer -->
+                <div class="bg-white rounded-xl shadow-premium p-8 border border-gray-100 flex flex-col justify-between h-full group transition-transform hover:-translate-y-1 duration-300">
+                    <div>
+                        <i class="fa-solid fa-quote-left text-3xl text-teal-100 mb-6 block"></i>
+                        <p class="text-gray-700 mb-8 font-inter font-light leading-loose">"In September 2020, I woke up completely bedridden, unable to walk. Every bone, joint, and muscle ached with level 10 pain. In just five minutes, Dr. Monhollon diagnosed me with Lyme disease and mercury poisoning. Bloodwork confirmed everything he had said. I received my SOT on January 29, 2021. On March 24â€”just 8.5 weeks laterâ€”I woke up feeling like myself again. Today, I feel healed and fully able to do everything I could before I got sick. Dr. Monhollon saved my life, and you couldnâ€™t be in better hands."</p>
+                    </div>
+                    <div class="flex items-center mt-auto pt-6 border-t border-gray-50">
+                        <img src="https://flimc.com/wp-content/uploads/2025/06/Jennifer-e1749749072652.webp" alt="Jennifer" class="w-14 h-14 rounded-full object-cover mr-4 shadow-sm border border-gray-100">
+                        <div>
+                            <h4 class="font-bold text-navy-900 text-lg">Jennifer</h4>
+                            <p class="text-teal-600 text-xs font-semibold uppercase tracking-wider">Lyme Recovery</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Three Column Grid for Shorter Testimonials -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                
+                <!-- Zuzana Shaw Novakova -->
+                <div class="bg-white rounded-xl p-8 border border-gray-100 flex flex-col h-full hover:shadow-premium transition-shadow duration-300">
+                    <p class="text-gray-700 mb-6 font-serif italic text-[15px] leading-relaxed flex-grow">"In a world where rushed visits and symptom-masking treatments have become the norm, discovering Dr. John Monhollon is like finding a hidden treasure. He is a true healer, a compassionate soul, and a visionary in integrative and holistic care. I wholeheartedly recommend Dr. John Monhollon to anyone seeking not just treatment, but transformation."</p>
+                    <div class="mt-auto">
+                        <h4 class="font-bold text-navy-900">Zuzana Shaw Novakova</h4>
+                        <div class="flex mt-1">
+                            <i class="fa-solid fa-star text-[#d4af37] text-[10px] mx-[1px]"></i>
+                            <i class="fa-solid fa-star text-[#d4af37] text-[10px] mx-[1px]"></i>
+                            <i class="fa-solid fa-star text-[#d4af37] text-[10px] mx-[1px]"></i>
+                            <i class="fa-solid fa-star text-[#d4af37] text-[10px] mx-[1px]"></i>
+                            <i class="fa-solid fa-star text-[#d4af37] text-[10px] mx-[1px]"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Elizabeth Howard -->
+                <div class="bg-white rounded-xl p-8 border border-gray-100 flex flex-col h-full hover:shadow-premium transition-shadow duration-300">
+                    <p class="text-gray-700 mb-6 font-serif italic text-[15px] leading-relaxed flex-grow">"Dr. John Monhollon and his staff provide the most professional care of any facility I have ever been toâ€”and I have been to many. If youâ€™re looking for personalized care that targets your specific needs in todayâ€™s fast-paced world, I highly recommend them."</p>
+                    <div class="mt-auto">
+                        <h4 class="font-bold text-navy-900">Elizabeth Howard</h4>
+                        <div class="flex mt-1">
+                            <i class="fa-solid fa-star text-[#d4af37] text-[10px] mx-[1px]"></i>
+                            <i class="fa-solid fa-star text-[#d4af37] text-[10px] mx-[1px]"></i>
+                            <i class="fa-solid fa-star text-[#d4af37] text-[10px] mx-[1px]"></i>
+                            <i class="fa-solid fa-star text-[#d4af37] text-[10px] mx-[1px]"></i>
+                            <i class="fa-solid fa-star text-[#d4af37] text-[10px] mx-[1px]"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Janet Hardwick -->
+                <div class="bg-white rounded-xl p-8 border border-gray-100 flex flex-col h-full hover:shadow-premium transition-shadow duration-300">
+                    <p class="text-gray-700 mb-6 font-serif italic text-[15px] leading-relaxed flex-grow">"Dr. Monhollon and his staff are amazingâ€”caring, compassionate, and so knowledgeable. My daughter was bedridden with Lyme, and I was also very sick. Now, we have our lives back. We even fly in from out of state. It is worth every dollar we spend."</p>
+                    <div class="mt-auto">
+                        <h4 class="font-bold text-navy-900">Janet Hardwick</h4>
+                        <div class="flex mt-1">
+                            <i class="fa-solid fa-star text-[#d4af37] text-[10px] mx-[1px]"></i>
+                            <i class="fa-solid fa-star text-[#d4af37] text-[10px] mx-[1px]"></i>
+                            <i class="fa-solid fa-star text-[#d4af37] text-[10px] mx-[1px]"></i>
+                            <i class="fa-solid fa-star text-[#d4af37] text-[10px] mx-[1px]"></i>
+                            <i class="fa-solid fa-star text-[#d4af37] text-[10px] mx-[1px]"></i>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Disclaimer -->
+            <div class="mt-16 text-center text-xs text-gray-400 max-w-3xl mx-auto">
+                <p>Disclaimer: Results described in patient testimonials are individual experiences and may vary. Testimonials do not constitute medical claims or guarantees of outcomes and should not be interpreted as promises of efficacy.</p>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-teal-700 pt-16 pb-2 mt-auto relative z-20 text-white" id="contact-us">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center">
+            <!-- Logo -->
+            <img src="logow.png" alt="FLIMC Logo" class="h-40 w-auto object-contain mb-10 hover:scale-105 transition duration-300 drop-shadow-md">
+            
+            <!-- Social Icons -->
+            <div class="flex space-x-4 mb-6">
+                <a href="https://www.facebook.com/FLIMC/" target="_blank" rel="noopener noreferrer" class="bg-white/10 text-white rounded-full w-10 h-10 flex items-center justify-center hover:bg-white/20 transition">
+                    <i class="fa-brands fa-facebook-f"></i>
+                </a>
+                <a href="https://www.instagram.com/flimcsarasota/" target="_blank" rel="noopener noreferrer" class="bg-white/10 text-white rounded-full w-10 h-10 flex items-center justify-center hover:bg-white/20 transition">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+            </div>
+
+            <!-- Contact Text -->
+            <p class="text-white text-xl font-medium mb-12 text-center">Have a question? Reach out to our team for an answer!</p>
+
+            <!-- Contact & Location -->
+            <div class="flex flex-col md:flex-row justify-center w-full gap-12 md:gap-32 text-center text-teal-50 mb-16">
+                <div>
+                    <p class="text-2xl font-black mb-2">(941) 955-6220</p>
+                    <p class="text-2xl font-black">Info@flimc.com</p>
+                </div>
+                <div>
+                    <p class="font-bold text-lg mb-1">Office Location</p>
+                    <p class="text-teal-100 text-lg">2415 University Pkwy,<br>Sarasota, FL 34243</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Copyright -->
+        <div class="border-t border-teal-600 pt-4 text-center text-teal-200 text-xs font-medium w-full mt-2 pb-2">
+            Copyright Â© 2026 flimc | <a href="#" class="hover:underline text-teal-100">Privacy Policy</a> | <a href="#" class="hover:underline text-teal-100">Terms & Conditions</a>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const btn = document.getElementById('mobile-menu-btn');
+            const menu = document.getElementById('mobile-menu');
+            if(btn && menu) {
+                btn.addEventListener('click', function() {
+                    menu.classList.toggle('hidden');
+                });
+                const links = menu.querySelectorAll('a');
+                links.forEach(link => {
+                    link.addEventListener('click', () => {
+                        menu.classList.add('hidden');
+                    });
+                });
+            }
+        });
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+

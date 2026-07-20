@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lyme Disease Care | Florida Integrative Medical Center</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Outfit', 'sans-serif'],
+                        inter: ['Inter', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-sans text-gray-800 antialiased bg-[#eef7f9] flex flex-col min-h-screen relative overflow-x-hidden">
+
+    <!-- Header -->
+    <header class="w-full bg-white shadow-sm relative z-50 pt-4 pb-4 px-6 md:px-16 flex justify-between items-center mx-auto">
+        <div class="flex items-center gap-4">
+            <a href="index.html" class="flex items-center gap-4">
+                <img src="logo.png" alt="Florida Integrative Medical Center" onerror="this.src='logow.png'" class="w-16 md:w-20 h-auto">
+                <div class="hidden md:block">
+                    <h1 class="text-xl md:text-2xl font-serif font-bold text-[#00657e] leading-tight tracking-wide">FLORIDA INTEGRATIVE<br><span class="text-gray-500">MEDICAL CENTER</span></h1>
+                </div>
+            </a>
+        </div>
+        
+        <!-- Mobile Menu Toggle -->
+        <div class="flex flex-col items-center cursor-pointer relative" onclick="document.getElementById('mobile-menu').classList.toggle('hidden')">
+            <div class="text-[#00657e] p-2 flex items-center justify-center hover:opacity-80 transition-all duration-300">
+                <i class="fa-solid fa-bars text-3xl md:text-4xl"></i>
+            </div>
+            
+            <!-- Mobile Menu Dropdown -->
+            <div id="mobile-menu" class="hidden absolute top-14 right-0 w-64 bg-white/95 backdrop-blur-xl shadow-2xl rounded-2xl p-6 z-50 border border-teal-100 flex flex-col space-y-4 text-left">
+                <a href="index.html" class="text-[#003a4d] font-bold text-base hover:text-teal-600 transition border-b border-gray-100 pb-2">Home</a>
+                <a href="conditions.html" class="text-[#003a4d] font-bold text-base hover:text-teal-600 transition border-b border-gray-100 pb-2">Conditions</a>
+                  <a href="personalized-care.html" class="text-[#003a4d] font-bold text-base hover:text-teal-600 transition border-b border-gray-100 pb-2">Personalized Care</a>
+                <a href="iv-room.html" class="text-[#003a4d] font-bold text-base hover:text-teal-600 transition border-b border-gray-100 pb-2">IV Room</a>
+                  <a href="lyme-disease-care.html" class="text-[#003a4d] font-bold text-base hover:text-teal-600 transition border-b border-gray-100 pb-2">Lyme Disease Care</a>
+                <a href="therapies.html" class="text-[#003a4d] font-bold text-base hover:text-teal-600 transition border-b border-gray-100 pb-2 hidden">Therapies</a>
+                
+                <!-- Therapies Dropdown -->
+                <div class="border-b border-gray-100 pb-2">
+                    <button class="text-[#003a4d] font-bold text-base hover:text-teal-600 transition w-full text-left flex justify-between items-center" onclick="event.stopPropagation(); document.getElementById('therapies-menu-list').classList.toggle('hidden')">
+                        Therapies <i class="fa-solid fa-chevron-down text-xs"></i>
+                    </button>
+                    <div id="therapies-menu-list" class="hidden flex-col space-y-3 mt-3 pl-4 border-l-2 border-teal-100 max-h-48 overflow-y-auto custom-scrollbar">
+                        <a href="faq.html" class="block text-sm text-[#003a4d] hover:text-teal-600 transition">FAQ</a>
+                        <a href="eboo.html" class="block text-sm text-[#003a4d] hover:text-teal-600 transition">EBOO</a>
+                        <a href="ebo2.html" class="block text-sm text-[#003a4d] hover:text-teal-600 transition">EBO2</a>
+                        <a href="ozone-therapy.html" class="block text-sm text-[#003a4d] hover:text-teal-600 transition">Ozone Therapy</a>
+                        <a href="ubi-therapy.html" class="block text-sm text-[#003a4d] hover:text-teal-600 transition">UBI Therapy</a>
+                        <a href="vitamin-c.html" class="block text-sm text-[#003a4d] hover:text-teal-600 transition">Vitamin C</a>
+                        <a href="myers-cocktail.html" class="block text-sm text-[#003a4d] hover:text-teal-600 transition">Myers Cocktail</a>
+                        <a href="flu-defense.html" class="block text-sm text-[#003a4d] hover:text-teal-600 transition">Flu Defense</a>
+                        <a href="vitality.html" class="block text-sm text-[#003a4d] hover:text-teal-600 transition">Vitality</a>
+                        <a href="glutathione.html" class="block text-sm text-[#003a4d] hover:text-teal-600 transition">Glutathione</a>
+                        <a href="egcg.html" class="block text-sm text-[#003a4d] hover:text-teal-600 transition">EGCG</a>
+                        <a href="migraine-defense.html" class="block text-sm text-[#003a4d] hover:text-teal-600 transition">Migraine Defense</a>
+                        <a href="chelation-therapy.html" class="block text-sm text-[#003a4d] hover:text-teal-600 transition">Chelation Therapy</a>
+                        <a href="ubi-with-ozone.html" class="block text-sm text-[#003a4d] hover:text-teal-600 transition">UBI with Ozone</a>
+                        <a href="5-pass-ozone.html" class="block text-sm text-[#003a4d] hover:text-teal-600 transition">5-Pass Ozone Therapy</a>
+                        <a href="iv-antibiotics.html" class="block text-sm text-[#003a4d] hover:text-teal-600 transition">IV Antibiotics</a>
+                        <a href="iv-iron.html" class="block text-sm text-[#003a4d] hover:text-teal-600 transition">IV Iron</a>
+                        <a href="silver-infusion.html" class="block text-sm text-[#003a4d] hover:text-teal-600 transition">Silver Infusion</a>
+                    </div>
+                </div>
+                <a href="about.html" class="text-[#003a4d] font-bold text-base hover:text-teal-600 transition border-b border-gray-100 pb-2">About</a>
+                <a href="team.html" class="text-[#003a4d] font-bold text-base hover:text-teal-600 transition border-b border-gray-100 pb-2">Meet Our Team</a>
+                <a href="testimonials.html" class="text-[#003a4d] font-bold text-base hover:text-teal-600 transition border-b border-gray-100 pb-2">Testimonials</a>
+                <a href="#contact-us" class="bg-teal-600 text-white text-center font-bold text-base py-2 rounded-xl hover:bg-teal-700 shadow-md transition mt-2">Book Now</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="flex-grow relative bg-[#eef7f9] overflow-hidden">
+        
+        <!-- Background elements -->
+        <div class="absolute top-0 right-0 w-full md:w-3/4 lg:w-1/2 h-[500px] z-0">
+            <!-- The Image -->
+            <img src="infusion_bg.png" alt="Treatment Room" class="w-full h-full object-cover opacity-60">
+            
+            <!-- Fade Overlay (Left to Right) -->
+            <div class="absolute inset-0 bg-gradient-to-r from-[#eef7f9] via-[#eef7f9]/60 to-transparent"></div>
+            
+            <!-- Fade Overlay (Bottom to Top) -->
+            <div class="absolute inset-0 bg-gradient-to-t from-[#eef7f9] via-[#eef7f9]/40 to-transparent"></div>
+        </div>
+        <img src="bottom images.png" alt="" class="absolute bottom-0 left-0 right-0 w-full h-[600px] object-cover object-top opacity-100 z-0 pointer-events-none">
+
+        <!-- FAQ Container -->
+        <section class="relative z-20 max-w-[1000px] mx-auto px-4 sm:px-6 md:px-12 pt-16 pb-32">
+            
+            <!-- Header Text -->
+            <div class="mb-10 w-full max-w-2xl">
+                <h1 class="text-4xl md:text-5xl lg:text-[3.5rem] font-serif font-bold text-[#0f3458] leading-[1.1] mb-6">
+                    FREQUENTLY<br>ASKED QUESTIONS
+                </h1>
+                
+                <div class="flex items-center w-full max-w-xs mb-6">
+                    <div class="h-[1.5px] flex-grow bg-[#b8e2e9]"></div>
+                    <div class="px-2 text-[#0F7A89]">
+                        <i class="fa-solid fa-dharmachakra text-sm text-[#0F7A89]"></i>
+                    </div>
+                    <div class="h-[1.5px] flex-grow bg-[#b8e2e9]"></div>
+                </div>
+
+                <p class="text-[#0f3458] font-medium text-[15px] leading-relaxed max-w-lg">
+                    Find answers to the most common questions about Lyme disease, co-infections, testing, and treatment at Florida Integrative Medical Center.
+                </p>
+            </div>
+
+            <!-- Accordion List -->
+            <div class="space-y-4">
+                
+                <!-- Item 1 -->
+                <div class="bg-white rounded-[1.5rem] border border-[#b8e2e9] overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+                    <button class="w-full text-left px-6 py-5 flex items-center justify-between focus:outline-none accordion-btn">
+                        <div class="flex items-center gap-6">
+                            <div class="w-14 h-14 rounded-full border border-[#b8e2e9] flex items-center justify-center shrink-0">
+                                <i class="fa-solid fa-user-injured text-2xl text-[#0F7A89]"></i>
+                            </div>
+                            <span class="font-bold text-[#0F7A89] text-lg">What is chronic Lyme disease?</span>
+                        </div>
+                        <i class="fa-solid fa-chevron-down text-[#0F7A89] transition-transform duration-300"></i>
+                    </button>
+                    <div class="px-6 pb-6 pl-[6.5rem] hidden accordion-content text-[#0f172a] font-medium text-sm leading-relaxed pr-10">
+                        Chronic Lyme disease refers to persistent symptoms that continue after initial infection. These may result from ongoing immune dysfunction, co-infections, or inflammatory responses, requiring a more comprehensive care approach.
+                    </div>
+                </div>
+
+                <!-- Item 2 -->
+                <div class="bg-white rounded-[1.5rem] border border-[#b8e2e9] overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+                    <button class="w-full text-left px-6 py-5 flex items-center justify-between focus:outline-none accordion-btn">
+                        <div class="flex items-center gap-6">
+                            <div class="w-14 h-14 rounded-full border border-[#b8e2e9] flex items-center justify-center shrink-0">
+                                <i class="fa-solid fa-file-medical text-2xl text-[#0F7A89]"></i>
+                            </div>
+                            <span class="font-bold text-[#0F7A89] text-lg">How is Lyme disease diagnosed?</span>
+                        </div>
+                        <i class="fa-solid fa-chevron-down text-[#0F7A89] transition-transform duration-300"></i>
+                    </button>
+                    <div class="px-6 pb-6 pl-[6.5rem] hidden accordion-content text-[#0f172a] font-medium text-sm leading-relaxed pr-10">
+                        Diagnosis involves a combination of clinical evaluation and advanced lab testing. Standard tests may miss infections, which is why specialty labs are often used for more accurate detection.
+                    </div>
+                </div>
+
+                <!-- Item 3 -->
+                <div class="bg-white rounded-[1.5rem] border border-[#b8e2e9] overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+                    <button class="w-full text-left px-6 py-5 flex items-center justify-between focus:outline-none accordion-btn">
+                        <div class="flex items-center gap-6">
+                            <div class="w-14 h-14 rounded-full border border-[#b8e2e9] flex items-center justify-center shrink-0">
+                                <i class="fa-solid fa-capsules text-2xl text-[#0F7A89]"></i>
+                            </div>
+                            <span class="font-bold text-[#0F7A89] text-lg">What are Lyme co-infections?</span>
+                        </div>
+                        <i class="fa-solid fa-chevron-down text-[#0F7A89] transition-transform duration-300"></i>
+                    </button>
+                    <div class="px-6 pb-6 pl-[6.5rem] hidden accordion-content text-[#0f172a] font-medium text-sm leading-relaxed pr-10">
+                        Co-infections such as Babesia and Bartonella are commonly transmitted alongside Lyme disease. They can worsen symptoms and require separate identification and care strategies.
+                    </div>
+                </div>
+
+                <!-- Item 4 -->
+                <div class="bg-white rounded-[1.5rem] border border-[#b8e2e9] overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+                    <button class="w-full text-left px-6 py-5 flex items-center justify-between focus:outline-none accordion-btn">
+                        <div class="flex items-center gap-6">
+                            <div class="w-14 h-14 rounded-full border border-[#b8e2e9] flex items-center justify-center shrink-0">
+                                <i class="fa-solid fa-brain text-2xl text-[#0F7A89]"></i>
+                            </div>
+                            <span class="font-bold text-[#0F7A89] text-lg">Can Lyme disease affect the brain?</span>
+                        </div>
+                        <i class="fa-solid fa-chevron-down text-[#0F7A89] transition-transform duration-300"></i>
+                    </button>
+                    <div class="px-6 pb-6 pl-[6.5rem] hidden accordion-content text-[#0f172a] font-medium text-sm leading-relaxed pr-10">
+                        Yes, Lyme disease can impact the central nervous system, causing symptoms like brain fog, memory issues, mood changes, and neurological dysfunction.
+                    </div>
+                </div>
+
+                <!-- Item 5 -->
+                <div class="bg-white rounded-[1.5rem] border border-[#b8e2e9] overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+                    <button class="w-full text-left px-6 py-5 flex items-center justify-between focus:outline-none accordion-btn">
+                        <div class="flex items-center gap-6">
+                            <div class="w-14 h-14 rounded-full border border-[#b8e2e9] flex items-center justify-center shrink-0">
+                                <i class="fa-solid fa-dna text-2xl text-[#0F7A89]"></i>
+                            </div>
+                            <span class="font-bold text-[#0F7A89] text-lg">What is SOT therapy?</span>
+                        </div>
+                        <i class="fa-solid fa-chevron-down text-[#0F7A89] transition-transform duration-300"></i>
+                    </button>
+                    <div class="px-6 pb-6 pl-[6.5rem] hidden accordion-content text-[#0f172a] font-medium text-sm leading-relaxed pr-10">
+                        SOT (Supportive Oligonucleotide Therapy) is a targeted therapy designed to support the body's response to specific pathogens identified through advanced testing.
+                    </div>
+                </div>
+
+                <!-- Item 6 -->
+                <div class="bg-white rounded-[1.5rem] border border-[#b8e2e9] overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+                    <button class="w-full text-left px-6 py-5 flex items-center justify-between focus:outline-none accordion-btn">
+                        <div class="flex items-center gap-6">
+                            <div class="w-14 h-14 rounded-full border border-[#b8e2e9] flex items-center justify-center shrink-0">
+                                <i class="fa-regular fa-calendar-days text-2xl text-[#0F7A89]"></i>
+                            </div>
+                            <span class="font-bold text-[#0F7A89] text-lg">How long does Lyme treatment take?</span>
+                        </div>
+                        <i class="fa-solid fa-chevron-down text-[#0F7A89] transition-transform duration-300"></i>
+                    </button>
+                    <div class="px-6 pb-6 pl-[6.5rem] hidden accordion-content text-[#0f172a] font-medium text-sm leading-relaxed pr-10">
+                        Care duration varies based on severity, co-infections, and individual health factors. Some patients improve within months, while others require longer-term support.
+                    </div>
+                </div>
+
+                <!-- Item 7 -->
+                <div class="bg-white rounded-[1.5rem] border border-[#b8e2e9] overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+                    <button class="w-full text-left px-6 py-5 flex items-center justify-between focus:outline-none accordion-btn">
+                        <div class="flex items-center gap-6">
+                            <div class="w-14 h-14 rounded-full border border-[#b8e2e9] flex items-center justify-center shrink-0">
+                                <i class="fa-solid fa-heart-circle-plus text-2xl text-[#0F7A89]"></i>
+                            </div>
+                            <span class="font-bold text-[#0F7A89] text-lg">Is Lyme disease curable?</span>
+                        </div>
+                        <i class="fa-solid fa-chevron-down text-[#0F7A89] transition-transform duration-300"></i>
+                    </button>
+                    <div class="px-6 pb-6 pl-[6.5rem] hidden accordion-content text-[#0f172a] font-medium text-sm leading-relaxed pr-10">
+                        Early-stage Lyme disease can often be managed effectively. Chronic cases may require ongoing management to reduce symptoms and improve quality of life.
+                    </div>
+                </div>
+
+                <!-- Item 8 -->
+                <div class="bg-white rounded-[1.5rem] border border-[#b8e2e9] overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+                    <button class="w-full text-left px-6 py-5 flex items-center justify-between focus:outline-none accordion-btn">
+                        <div class="flex items-center gap-6">
+                            <div class="w-14 h-14 rounded-full border border-[#b8e2e9] flex items-center justify-center shrink-0">
+                                <i class="fa-solid fa-user-doctor text-2xl text-[#0F7A89]"></i>
+                            </div>
+                            <span class="font-bold text-[#0F7A89] text-lg">Why do patients seek out Dr. Monhollon for Lyme disease evaluation?</span>
+                        </div>
+                        <i class="fa-solid fa-chevron-down text-[#0F7A89] transition-transform duration-300"></i>
+                    </button>
+                    <div class="px-6 pb-6 pl-[6.5rem] hidden accordion-content text-[#0f172a] font-medium text-sm leading-relaxed pr-10">
+                        Dr. Monhollon is a board-certified family medicine physician who completed advanced ILADS-Lyme disease training and has served as a physician mentor for other clinicians pursuing Lyme-focused education. His approach combines comprehensive evaluation, advanced testing, and personalized care planning for patients experiencing Lyme disease and related chronic health concerns.
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Footer Action Banner -->
+            <div class="mt-12 bg-white border border-[#b8e2e9] rounded-2xl shadow-sm flex flex-col md:flex-row items-center gap-6 relative overflow-hidden pr-6">
+                <!-- Plant Image Left -->
+                <div class="w-24 md:w-32 h-full flex-shrink-0 bg-white">
+                    <img src="plant_stem.png" alt="Decorative Plant" class="w-full h-full object-cover object-left mix-blend-multiply">
+                </div>
+                
+                <div class="flex-1 py-6 pl-2">
+                    <h3 class="text-[#0F7A89] text-lg font-bold mb-1">Ready to Take the Next Step?</h3>
+                    <p class="text-[#0f172a] text-xs font-medium max-w-sm leading-relaxed">
+                        Every patient receives a comprehensive evaluation and personalized plan tailored to your unique needs.
+                    </p>
+                </div>
+                
+                <div class="flex flex-col sm:flex-row items-center gap-8 py-6 pr-4">
+                    <!-- Action 1 -->
+                    <a href="#contact-us" class="flex items-center gap-4 group">
+                        <div class="w-12 h-12 bg-[#00657e] rounded-full flex items-center justify-center text-white shrink-0 group-hover:bg-[#003a4d] transition-colors">
+                            <i class="fa-solid fa-calendar-check text-xl"></i>
+                        </div>
+                        <div>
+                            <p class="text-[#0F7A89] font-bold text-[11px] tracking-widest">SCHEDULE A<br>CONSULTATION</p>
+                            <p class="text-[#0f172a] text-[10px] font-medium">Walk-ins welcome<br>or call ahead.</p>
+                        </div>
+                    </a>
+                    
+                    <!-- Action 2 -->
+                    <a href="tel:9419556220" class="flex items-center gap-4 group">
+                        <div class="w-12 h-12 bg-[#00657e] rounded-full flex items-center justify-center text-white shrink-0 group-hover:bg-[#003a4d] transition-colors">
+                            <i class="fa-solid fa-phone text-xl"></i>
+                        </div>
+                        <div>
+                            <p class="text-[#0F7A89] font-bold text-[11px] tracking-widest">CALL US TODAY</p>
+                            <p class="text-[#0F7A89] font-bold text-base leading-tight">(941) 955-6220</p>
+                            <p class="text-[#0f172a] text-[10px] font-medium">We're here to help.</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-teal-700 pt-16 pb-2 mt-auto relative z-20 text-white" id="contact-us">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center">
+            <!-- Logo -->
+            <img src="logow.png" alt="FLIMC Logo" class="h-40 w-auto object-contain mb-10 hover:scale-105 transition duration-300 drop-shadow-md">
+            
+            <!-- Social Icons -->
+            <div class="flex space-x-4 mb-6">
+                <a href="https://www.facebook.com/FLIMC/" target="_blank" rel="noopener noreferrer" class="bg-white/10 text-white rounded-full w-10 h-10 flex items-center justify-center hover:bg-white/20 transition">
+                    <i class="fa-brands fa-facebook-f"></i>
+                </a>
+                <a href="https://www.instagram.com/flimcsarasota/" target="_blank" rel="noopener noreferrer" class="bg-white/10 text-white rounded-full w-10 h-10 flex items-center justify-center hover:bg-white/20 transition">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+            </div>
+
+            <!-- Contact Text -->
+            <p class="text-white text-xl font-medium mb-12 text-center">Have a question? Reach out to our team for an answer!</p>
+
+            <!-- Contact & Location -->
+            <div class="flex flex-col md:flex-row justify-center w-full gap-12 md:gap-32 text-center text-teal-50 mb-16">
+                <div>
+                    <p class="text-2xl font-black mb-2">(941) 955-6220</p>
+                    <p class="text-2xl font-black">Info@flimc.com</p>
+                </div>
+                <div>
+                    <p class="font-bold text-lg mb-1">Office Location</p>
+                    <p class="text-teal-100 text-lg">2415 University Pkwy,<br>Sarasota, FL 34243</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Copyright -->
+        <div class="border-t border-teal-600 pt-4 text-center text-teal-200 text-xs font-medium w-full mt-2 pb-2">
+            Copyright Ãƒâ€šÃ‚Â© 2026 flimc | <a href="#" class="hover:underline text-teal-100">Privacy Policy</a> | <a href="#" class="hover:underline text-teal-100">Terms & Conditions</a>
+        </div>
+    </footer>
+
+    <script>
+        // Accordion functionality
+        document.querySelectorAll('.accordion-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                const content = btn.nextElementSibling;
+                const icon = btn.querySelector('.fa-chevron-down');
+                
+                // Toggle hidden class on content
+                if(content.classList.contains('hidden')) {
+                    content.classList.remove('hidden');
+                    icon.style.transform = 'rotate(180deg)';
+                } else {
+                    content.classList.add('hidden');
+                    icon.style.transform = 'rotate(0deg)';
+                }
+            });
+        });
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+

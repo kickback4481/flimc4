@@ -1,0 +1,255 @@
+﻿<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Dr. John Monhollon | Florida Integrative Medical Center</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Outfit', 'sans-serif'],
+                        inter: ['Inter', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    },
+                    colors: {
+                        teal: {
+                            50: '#f4fbfc',
+                            100: '#eaf6f8',
+                            400: '#5ac6d6',
+                            500: '#38b2c6',
+                            600: '#047b8e',
+                            700: '#036170',
+                        },
+                        navy: {
+                            800: '#1e293b',
+                            900: '#0f172a',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="overflow-x-hidden font-sans text-gray-800 antialiased bg-[#fcfdfd] flex flex-col min-h-screen">
+
+        <!-- Header -->
+    <header class="w-full bg-white shadow-sm relative z-50 pt-4 pb-4 px-6 md:px-16 flex justify-between items-center mx-auto">
+        <div class="flex items-center gap-4">
+            <a href="index.html" class="flex items-center gap-4">
+                <img src="logo.png" alt="Florida Integrative Medical Center" onerror="this.src='logow.png'" class="w-16 md:w-20 h-auto">
+                <div class="hidden md:block">
+                    <h1 class="text-xl md:text-2xl font-serif font-bold text-[#00657e] leading-tight tracking-wide">FLORIDA INTEGRATIVE<br><span class="text-gray-500">MEDICAL CENTER</span></h1>
+                </div>
+            </a>
+        </div>
+        
+        <!-- Mobile Menu Toggle -->
+        <div class="flex flex-col items-center cursor-pointer relative" onclick="document.getElementById('mobile-menu').classList.toggle('hidden')">
+            <div class="text-[#00657e] p-2 flex items-center justify-center hover:opacity-80 transition-all duration-300">
+                <i class="fa-solid fa-bars text-3xl md:text-4xl"></i>
+            </div>
+            
+            <!-- Mobile Menu Dropdown -->
+            <div id="mobile-menu" class="hidden absolute top-14 right-0 w-64 bg-white/95 backdrop-blur-xl shadow-2xl rounded-2xl p-6 z-50 border border-teal-100 flex flex-col space-y-4 text-left">
+                <a href="index.html" class="text-[#003a4d] font-bold text-base hover:text-teal-600 transition border-b border-gray-100 pb-2">Home</a>
+                <a href="conditions.html" class="text-[#003a4d] font-bold text-base hover:text-teal-600 transition border-b border-gray-100 pb-2">Conditions</a>
+                  <a href="personalized-care.html" class="text-[#003a4d] font-bold text-base hover:text-teal-600 transition border-b border-gray-100 pb-2">Personalized Care</a>
+                <a href="iv-room.html" class="text-[#003a4d] font-bold text-base hover:text-teal-600 transition border-b border-gray-100 pb-2">IV Room</a>
+                  <a href="lyme-disease-care.html" class="text-[#003a4d] font-bold text-base hover:text-teal-600 transition border-b border-gray-100 pb-2">Lyme Disease Care</a>
+                <a href="therapies.html" class="text-[#003a4d] font-bold text-base hover:text-teal-600 transition border-b border-gray-100 pb-2 hidden">Therapies</a>
+                
+                <!-- Therapies Dropdown -->
+                <div class="border-b border-gray-100 pb-2">
+                    <button class="text-[#003a4d] font-bold text-base hover:text-teal-600 transition w-full text-left flex justify-between items-center" onclick="event.stopPropagation(); document.getElementById('therapies-menu-list').classList.toggle('hidden')">
+                        Therapies <i class="fa-solid fa-chevron-down text-xs"></i>
+                    </button>
+                    <div id="therapies-menu-list" class="hidden flex-col space-y-3 mt-3 pl-4 border-l-2 border-teal-100 max-h-48 overflow-y-auto custom-scrollbar">
+                        <a href="faq.html" class="block text-sm text-[#003a4d] hover:text-teal-600 transition">FAQ</a>
+                        <a href="eboo.html" class="block text-sm text-[#003a4d] hover:text-teal-600 transition">EBOO</a>
+                        <a href="ebo2.html" class="block text-sm text-[#003a4d] hover:text-teal-600 transition">EBO2</a>
+                        <a href="ozone-therapy.html" class="block text-sm text-[#003a4d] hover:text-teal-600 transition">Ozone Therapy</a>
+                        <a href="ubi-therapy.html" class="block text-sm text-[#003a4d] hover:text-teal-600 transition">UBI Therapy</a>
+                        <a href="vitamin-c.html" class="block text-sm text-[#003a4d] hover:text-teal-600 transition">Vitamin C</a>
+                        <a href="myers-cocktail.html" class="block text-sm text-[#003a4d] hover:text-teal-600 transition">Myers Cocktail</a>
+                        <a href="flu-defense.html" class="block text-sm text-[#003a4d] hover:text-teal-600 transition">Flu Defense</a>
+                        <a href="vitality.html" class="block text-sm text-[#003a4d] hover:text-teal-600 transition">Vitality</a>
+                        <a href="glutathione.html" class="block text-sm text-[#003a4d] hover:text-teal-600 transition">Glutathione</a>
+                        <a href="egcg.html" class="block text-sm text-[#003a4d] hover:text-teal-600 transition">EGCG</a>
+                        <a href="migraine-defense.html" class="block text-sm text-[#003a4d] hover:text-teal-600 transition">Migraine Defense</a>
+                        <a href="chelation-therapy.html" class="block text-sm text-[#003a4d] hover:text-teal-600 transition">Chelation Therapy</a>
+                        <a href="ubi-with-ozone.html" class="block text-sm text-[#003a4d] hover:text-teal-600 transition">UBI with Ozone</a>
+                        <a href="5-pass-ozone.html" class="block text-sm text-[#003a4d] hover:text-teal-600 transition">5-Pass Ozone Therapy</a>
+                        <a href="iv-antibiotics.html" class="block text-sm text-[#003a4d] hover:text-teal-600 transition">IV Antibiotics</a>
+                        <a href="iv-iron.html" class="block text-sm text-[#003a4d] hover:text-teal-600 transition">IV Iron</a>
+                        <a href="silver-infusion.html" class="block text-sm text-[#003a4d] hover:text-teal-600 transition">Silver Infusion</a>
+                    </div>
+                </div>
+                <a href="about.html" class="text-[#003a4d] font-bold text-base hover:text-teal-600 transition border-b border-gray-100 pb-2">About</a>
+                <a href="team.html" class="text-[#003a4d] font-bold text-base hover:text-teal-600 transition border-b border-gray-100 pb-2">Meet Our Team</a>
+                <a href="testimonials.html" class="text-[#003a4d] font-bold text-base hover:text-teal-600 transition border-b border-gray-100 pb-2">Testimonials</a>
+                <a href="#contact-us" class="bg-teal-600 text-white text-center font-bold text-base py-2 rounded-xl hover:bg-teal-700 shadow-md transition mt-2">Book Now</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Content -->
+    <main class="flex-grow bg-[#f4fbfc]">
+        <section class="py-16 md:py-24 max-w-[1400px] mx-auto px-4 sm:px-6 md:px-16">
+            <div class="flex flex-col md:flex-row gap-12 lg:gap-20 items-center">
+                <!-- Text Column -->
+                <div class="w-full md:w-5/12 text-left pt-8">
+                    <h2 class="text-5xl md:text-[4rem] font-serif text-[#707070] mb-0 leading-tight">Meet</h2>
+                    <h1 class="text-7xl md:text-[7rem] font-serif font-bold text-[#0ea5e9] mb-4 leading-none">Dr. M</h1>
+                    
+                    <!-- Divider with leaf -->
+                    <div class="flex items-center w-full max-w-sm mb-6">
+                        <div class="h-[1.5px] flex-grow bg-[#0ea5e9]"></div>
+                        <div class="px-3 text-[#0ea5e9]">
+                            <i class="fa-solid fa-leaf text-xl"></i>
+                        </div>
+                        <div class="h-[1.5px] flex-grow bg-[#0ea5e9]"></div>
+                    </div>
+                    
+                    <h3 class="text-xl md:text-2xl font-sans font-medium text-[#0ea5e9] mb-8 tracking-wide">Dr. John Monhollon, MD</h3>
+                    
+                    <div class="text-[#0f172a] font-medium text-[15px] leading-relaxed space-y-6">
+                        <p>
+                            Dr. John Monhollon, MD â€” widely known as "Dr. M" â€” brings more than two decades of experience in functional and integrative medicine. His approach focuses on uncovering the underlying causes of health conditions and empowering patients to take an active role in their care.
+                        </p>
+                        <p>
+                            At FLIMC, patients are welcomed with trusted experience, heartfelt compassion, and the highest quality of care.
+                        </p>
+                        <p>
+                            Over the years, Dr. M has built a team of dedicated professionals who share his commitment to discovering the root cause of health concerns and creating personalized care plans. Together, they have created a center where clinical expertise, compassion, and hope come together to help patients improve their health, restore vitality, and enhance quality of life.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Image Column -->
+                <div class="w-full md:w-7/12 relative">
+                    <img src="meet.jpeg" alt="Dr. John Monhollon" onerror="this.src='doctor-photo.jpg'" class="w-full h-auto rounded-[2rem] shadow-2xl object-cover border-4 border-white">
+                </div>
+            </div>
+        </section>
+
+        <!-- Icons Section -->
+        <section class="w-full relative text-white py-16 -mb-2 mt-12 md:mt-16">
+            <!-- Background Image -->
+            <img src="bottom images.png" alt="" class="absolute inset-0 w-full h-[calc(100%+6rem)] -top-24 object-cover object-top z-10 pointer-events-none">
+            
+            <div class="relative z-20 max-w-[1400px] mx-auto px-4 sm:px-6 md:px-16">
+                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 md:gap-4 text-center md:divide-x divide-white/50">
+                    
+                    <!-- Icon 1 -->
+                    <div class="flex flex-col items-center px-4">
+                        <div class="w-20 h-20 rounded-full border-[1.5px] border-white bg-[#38bdf8] flex items-center justify-center mb-5">
+                            <i class="fa-solid fa-hand-holding-heart text-4xl"></i>
+                        </div>
+                        <h4 class="font-bold text-sm tracking-widest mb-3">TRUSTED<br>EXPERIENCE</h4>
+                        <p class="text-xs text-white/90 leading-relaxed font-medium">Over two decades of<br>expertise in functional and<br>integrative medicine.</p>
+                    </div>
+
+                    <!-- Icon 2 -->
+                    <div class="flex flex-col items-center px-4">
+                        <div class="w-20 h-20 rounded-full border-[1.5px] border-white bg-[#38bdf8] flex items-center justify-center mb-5">
+                            <i class="fa-solid fa-user text-3xl relative"><i class="fa-solid fa-heart absolute -bottom-1 -right-2 text-sm text-white"></i></i>
+                        </div>
+                        <h4 class="font-bold text-sm tracking-widest mb-3">HEARTFELT<br>COMPASSION</h4>
+                        <p class="text-xs text-white/90 leading-relaxed font-medium">A patient-centered<br>approach rooted in<br>genuine care.</p>
+                    </div>
+
+                    <!-- Icon 3 -->
+                    <div class="flex flex-col items-center px-4">
+                        <div class="w-20 h-20 rounded-full border-[1.5px] border-white bg-[#38bdf8] flex items-center justify-center mb-5">
+                            <i class="fa-solid fa-award text-4xl"></i>
+                        </div>
+                        <h4 class="font-bold text-sm tracking-widest mb-3">HIGHEST QUALITY<br>OF CARE</h4>
+                        <p class="text-xs text-white/90 leading-relaxed font-medium">Committed to delivering<br>exceptional, life-changing<br>care every day.</p>
+                    </div>
+
+                    <!-- Icon 4 -->
+                    <div class="flex flex-col items-center px-4">
+                        <div class="w-20 h-20 rounded-full border-[1.5px] border-white bg-[#38bdf8] flex items-center justify-center mb-5">
+                            <i class="fa-brands fa-pagelines text-4xl"></i>
+                        </div>
+                        <h4 class="font-bold text-sm tracking-widest mb-3">WHOLE-PERSON<br>FOCUS</h4>
+                        <p class="text-xs text-white/90 leading-relaxed font-medium">Empowering you to<br>restore balance, vitality,<br>and long-term wellness.</p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-teal-700 pt-16 pb-2 mt-auto relative z-20 text-white" id="contact-us">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center">
+            <!-- Logo -->
+            <img src="logow.png" alt="FLIMC Logo" class="h-40 w-auto object-contain mb-10 hover:scale-105 transition duration-300 drop-shadow-md">
+            
+            <!-- Social Icons -->
+            <div class="flex space-x-4 mb-6">
+                <a href="https://www.facebook.com/FLIMC/" target="_blank" rel="noopener noreferrer" class="bg-white/10 text-white rounded-full w-10 h-10 flex items-center justify-center hover:bg-white/20 transition">
+                    <i class="fa-brands fa-facebook-f"></i>
+                </a>
+                <a href="https://www.instagram.com/flimcsarasota/" target="_blank" rel="noopener noreferrer" class="bg-white/10 text-white rounded-full w-10 h-10 flex items-center justify-center hover:bg-white/20 transition">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+            </div>
+
+            <!-- Contact Text -->
+            <p class="text-white text-xl font-medium mb-12 text-center">Have a question? Reach out to our team for an answer!</p>
+
+            <!-- Contact & Location -->
+            <div class="flex flex-col md:flex-row justify-center w-full gap-12 md:gap-32 text-center text-teal-50 mb-16">
+                <div>
+                    <p class="text-2xl font-black mb-2">(941) 955-6220</p>
+                    <p class="text-2xl font-black">Info@flimc.com</p>
+                </div>
+                <div>
+                    <p class="font-bold text-lg mb-1">Office Location</p>
+                    <p class="text-teal-100 text-lg">2415 University Pkwy,<br>Sarasota, FL 34243</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Copyright -->
+        <div class="border-t border-teal-600 pt-4 text-center text-teal-200 text-xs font-medium w-full mt-2 pb-2">
+            Copyright Ã‚Â© 2026 flimc | <a href="#" class="hover:underline text-teal-100">Privacy Policy</a> | <a href="#" class="hover:underline text-teal-100">Terms & Conditions</a>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const btn = document.getElementById('mobile-menu-btn');
+            const menu = document.getElementById('mobile-menu');
+            if(btn && menu) {
+                btn.addEventListener('click', function() {
+                    menu.classList.toggle('hidden');
+                });
+                const links = menu.querySelectorAll('a');
+                links.forEach(link => {
+                    link.addEventListener('click', () => {
+                        menu.classList.add('hidden');
+                    });
+                });
+            }
+        });
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+

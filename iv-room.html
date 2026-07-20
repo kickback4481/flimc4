@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IV Room | Florida Integrative Medical Center</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Dancing+Script:wght@600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Outfit', 'sans-serif'],
+                        inter: ['Inter', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                        cursive: ['Dancing Script', 'cursive'],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-sans text-gray-800 antialiased bg-white flex flex-col min-h-screen overflow-x-hidden">
+
+    <!-- Header -->
+    <header class="w-full bg-white shadow-sm relative z-50 pt-4 pb-4 px-6 md:px-16 flex justify-between items-center mx-auto">
+        <div class="flex items-center gap-4">
+            <a href="index.html" class="flex items-center gap-4">
+                <img src="logo.png" alt="Florida Integrative Medical Center" onerror="this.src='logow.png'" class="w-16 md:w-20 h-auto">
+                <div class="hidden md:block">
+                    <h1 class="text-xl md:text-2xl font-serif font-bold text-[#00657e] leading-tight tracking-wide">FLORIDA INTEGRATIVE<br><span class="text-gray-500">MEDICAL CENTER</span></h1>
+                </div>
+            </a>
+        </div>
+        
+        <!-- Mobile Menu Toggle -->
+        <div class="flex flex-col items-center cursor-pointer relative" onclick="document.getElementById('mobile-menu').classList.toggle('hidden')">
+            <div class="text-[#00657e] p-2 flex items-center justify-center hover:opacity-80 transition-all duration-300">
+                <i class="fa-solid fa-bars text-3xl md:text-4xl"></i>
+            </div>
+            
+            <!-- Mobile Menu Dropdown -->
+            <div id="mobile-menu" class="hidden absolute top-14 right-0 w-64 bg-white/95 backdrop-blur-xl shadow-2xl rounded-2xl p-6 z-50 border border-teal-100 flex flex-col space-y-4 text-left">
+                <a href="index.html" class="text-[#003a4d] font-bold text-base hover:text-teal-600 transition border-b border-gray-100 pb-2">Home</a>
+                <a href="conditions.html" class="text-[#003a4d] font-bold text-base hover:text-teal-600 transition border-b border-gray-100 pb-2">Conditions</a>
+                <a href="personalized-care.html" class="text-[#003a4d] font-bold text-base hover:text-teal-600 transition border-b border-gray-100 pb-2">Personalized Care</a>
+                <a href="iv-room.html" class="text-[#003a4d] font-bold text-base hover:text-teal-600 transition border-b border-gray-100 pb-2">IV Room</a>
+                <a href="lyme-disease-care.html" class="text-[#003a4d] font-bold text-base hover:text-teal-600 transition border-b border-gray-100 pb-2">Lyme Disease Care</a>
+                <a href="therapies.html" class="text-[#003a4d] font-bold text-base hover:text-teal-600 transition border-b border-gray-100 pb-2 hidden">Therapies</a>
+                
+                <!-- Therapies Dropdown -->
+                <div class="border-b border-gray-100 pb-2">
+                    <button class="text-[#003a4d] font-bold text-base hover:text-teal-600 transition w-full text-left flex justify-between items-center" onclick="event.stopPropagation(); document.getElementById('therapies-menu-list').classList.toggle('hidden')">
+                        Therapies <i class="fa-solid fa-chevron-down text-xs"></i>
+                    </button>
+                    <div id="therapies-menu-list" class="hidden flex-col space-y-3 mt-3 pl-4 border-l-2 border-teal-100 max-h-48 overflow-y-auto custom-scrollbar">
+                        <a href="faq.html" class="block text-sm text-[#003a4d] hover:text-teal-600 transition">FAQ</a>
+                        <a href="eboo.html" class="block text-sm text-[#003a4d] hover:text-teal-600 transition">EBOO</a>
+                        <a href="ebo2.html" class="block text-sm text-[#003a4d] hover:text-teal-600 transition">EBO2</a>
+                        <a href="ozone-therapy.html" class="block text-sm text-[#003a4d] hover:text-teal-600 transition">Ozone Therapy</a>
+                        <a href="ubi-therapy.html" class="block text-sm text-[#003a4d] hover:text-teal-600 transition">UBI Therapy</a>
+                        <a href="vitamin-c.html" class="block text-sm text-[#003a4d] hover:text-teal-600 transition">Vitamin C</a>
+                        <a href="myers-cocktail.html" class="block text-sm text-[#003a4d] hover:text-teal-600 transition">Myers Cocktail</a>
+                        <a href="flu-defense.html" class="block text-sm text-[#003a4d] hover:text-teal-600 transition">Flu Defense</a>
+                        <a href="vitality.html" class="block text-sm text-[#003a4d] hover:text-teal-600 transition">Vitality</a>
+                        <a href="glutathione.html" class="block text-sm text-[#003a4d] hover:text-teal-600 transition">Glutathione</a>
+                        <a href="egcg.html" class="block text-sm text-[#003a4d] hover:text-teal-600 transition">EGCG</a>
+                        <a href="migraine-defense.html" class="block text-sm text-[#003a4d] hover:text-teal-600 transition">Migraine Defense</a>
+                        <a href="chelation-therapy.html" class="block text-sm text-[#003a4d] hover:text-teal-600 transition">Chelation Therapy</a>
+                        <a href="ubi-with-ozone.html" class="block text-sm text-[#003a4d] hover:text-teal-600 transition">UBI with Ozone</a>
+                        <a href="5-pass-ozone.html" class="block text-sm text-[#003a4d] hover:text-teal-600 transition">5-Pass Ozone Therapy</a>
+                        <a href="iv-antibiotics.html" class="block text-sm text-[#003a4d] hover:text-teal-600 transition">IV Antibiotics</a>
+                        <a href="iv-iron.html" class="block text-sm text-[#003a4d] hover:text-teal-600 transition">IV Iron</a>
+                        <a href="silver-infusion.html" class="block text-sm text-[#003a4d] hover:text-teal-600 transition">Silver Infusion</a>
+                    </div>
+                </div>
+                <a href="about.html" class="text-[#003a4d] font-bold text-base hover:text-teal-600 transition border-b border-gray-100 pb-2">About</a>
+                <a href="team.html" class="text-[#003a4d] font-bold text-base hover:text-teal-600 transition border-b border-gray-100 pb-2">Meet Our Team</a>
+                <a href="testimonials.html" class="text-[#003a4d] font-bold text-base hover:text-teal-600 transition border-b border-gray-100 pb-2">Testimonials</a>
+                <a href="#contact-us" class="bg-teal-600 text-white text-center font-bold text-base py-2 rounded-xl hover:bg-teal-700 shadow-md transition mt-2">Book Now</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Pre-Hero Text Banner -->
+    <div class="w-full bg-[#f4fbfc] text-center py-4 border-b border-[#e1f0f4]">
+        <h2 class="text-[#0F7A89] font-bold text-lg md:text-xl tracking-wide">Experience Comfort. Precision. Wellness.</h2>
+        <p class="text-[#0f172a] text-sm md:text-base font-medium mt-1">Medical-grade IV therapy in a relaxing, physician-guided environment.</p>
+    </div>
+
+    <!-- Main Content -->
+    <main class="flex-grow">
+        
+        <!-- Hero Section -->
+        <section class="w-full flex flex-col md:flex-row relative bg-white overflow-hidden min-h-[600px]">
+            
+            <!-- Left Content -->
+            <div class="w-full md:w-5/12 px-6 py-12 md:pl-16 md:pr-10 md:py-16 flex flex-col justify-center relative z-10 bg-white md:bg-transparent">
+                
+                <div class="flex items-center gap-4 mb-2">
+                    <div class="h-[1.5px] w-12 bg-[#0F7A89]"></div>
+                    <span class="text-[#0F7A89] font-bold text-sm tracking-widest uppercase">WELCOME TO OUR</span>
+                    <div class="h-[1.5px] w-12 bg-[#0F7A89]"></div>
+                </div>
+                
+                <h1 class="text-6xl md:text-[5rem] font-sans font-bold text-[#0F7A89] leading-none mb-6">
+                    IV ROOM
+                </h1>
+                
+                <div class="flex items-center w-full max-w-[8rem] mb-6">
+                    <div class="h-[1.5px] flex-grow bg-[#0F7A89]"></div>
+                    <div class="px-3 text-[#0F7A89]">
+                        <i class="fa-solid fa-leaf text-sm"></i>
+                    </div>
+                    <div class="h-[1.5px] flex-grow bg-[#0F7A89]"></div>
+                </div>
+                
+                <h2 class="text-2xl md:text-3xl font-sans font-bold text-[#003a4d] leading-tight mb-10">
+                    SARASOTA'S<br>#1 DESTINATION<br>FOR IV THERAPY &<br>INTEGRATIVE<br>WELLNESS
+                </h2>
+
+                <div class="space-y-6">
+                    <!-- Feature 1 -->
+                    <div class="flex items-start gap-4">
+                        <div class="w-14 h-14 rounded-full border-2 border-[#b8e2e9] flex items-center justify-center shrink-0 bg-[#f4fbfc]">
+                            <i class="fa-solid fa-droplet text-2xl text-[#0F7A89]"></i>
+                        </div>
+                        <div class="pt-1">
+                            <p class="text-[#0f172a] font-medium text-[15px] leading-snug">
+                                <span class="text-[#0F7A89] font-bold">Pure, medical-grade</span><br>vitamins (never diluted, never cut).
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <!-- Feature 2 -->
+                    <div class="flex items-start gap-4">
+                        <div class="w-14 h-14 rounded-full border-2 border-[#b8e2e9] flex items-center justify-center shrink-0 bg-[#f4fbfc]">
+                            <i class="fa-solid fa-leaf text-2xl text-[#0F7A89]"></i>
+                        </div>
+                        <div class="pt-1">
+                            <p class="text-[#0f172a] font-medium text-[15px] leading-snug">
+                                <span class="text-[#0F7A89] font-bold">Latex-free</span> bags +<br>medical-grade tubing.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <!-- Feature 3 -->
+                    <div class="flex items-start gap-4">
+                        <div class="w-14 h-14 rounded-full border-2 border-[#b8e2e9] flex items-center justify-center shrink-0 bg-[#f4fbfc]">
+                            <i class="fa-solid fa-plus text-2xl text-[#0F7A89]"></i>
+                        </div>
+                        <div class="pt-1">
+                            <p class="text-[#0f172a] font-medium text-[15px] leading-snug">
+                                <span class="text-[#0F7A89] font-bold">State-of-the-art</span><br>equipment for safety & precision.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <!-- Feature 4 -->
+                    <div class="flex items-start gap-4">
+                        <div class="w-14 h-14 rounded-full border-2 border-[#b8e2e9] flex items-center justify-center shrink-0 bg-[#f4fbfc]">
+                            <i class="fa-solid fa-spa text-2xl text-[#0F7A89]"></i>
+                        </div>
+                        <div class="pt-1">
+                            <p class="text-[#0f172a] font-medium text-[15px] leading-snug">
+                                <span class="text-[#0F7A89] font-bold">A holistic, whole-body</span><br>approach to your wellness.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Image Background -->
+            <div class="absolute top-0 right-0 w-full md:w-8/12 h-full z-0 hidden md:block">
+                <img src="infusion_bg.png" alt="IV Room" class="w-full h-full object-cover">
+                <!-- Fade Overlay (Left to Right) to blend with white background -->
+                <div class="absolute inset-0 bg-gradient-to-r from-white via-white/70 to-transparent w-2/3"></div>
+            </div>
+            
+        </section>
+
+        <!-- Divider Section -->
+        <section class="w-full relative bg-[#e4f6f9] py-16">
+            <div class="relative z-10 max-w-4xl mx-auto px-6 text-center">
+                <div class="flex items-center justify-center gap-6 mb-4">
+                    <div class="h-[1.5px] w-12 md:w-24 bg-[#0F7A89]"></div>
+                    <h3 class="text-3xl md:text-5xl font-cursive text-[#0F7A89]">Your comfort. Your health. Our priority.</h3>
+                    <div class="h-[1.5px] w-12 md:w-24 bg-[#0F7A89]"></div>
+                </div>
+                <p class="text-[#0f172a] font-medium text-base md:text-lg">
+                    Our IV Room offers a calm, relaxing environment where advanced<br class="hidden md:block">wellness therapy meets personalized care.
+                </p>
+            </div>
+        </section>
+
+        <!-- Gallery Section -->
+        <section class="max-w-[1200px] mx-auto px-6 py-16 mb-8">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                
+                <!-- Gallery Item 1 -->
+                <div class="flex flex-col items-center">
+                    <div class="w-full aspect-[4/5] rounded-[2rem] overflow-hidden shadow-md mb-6">
+                        <img src="iv_gallery_1.png" alt="Comfortable IV Room" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <div class="flex items-center gap-4 w-full">
+                        <div class="w-12 h-12 bg-[#0F7A89] rounded-full flex items-center justify-center shrink-0">
+                            <i class="fa-solid fa-chair text-white text-xl"></i>
+                        </div>
+                        <p class="text-[#0f172a] font-bold text-sm leading-tight">
+                            Comfortable<br>& Relaxing
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Gallery Item 2 -->
+                <div class="flex flex-col items-center">
+                    <div class="w-full aspect-[4/5] rounded-[2rem] overflow-hidden shadow-md mb-6">
+                        <img src="iv_gallery_2.png" alt="Private Bay" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <div class="flex items-center gap-4 w-full">
+                        <div class="w-12 h-12 bg-[#0F7A89] rounded-full flex items-center justify-center shrink-0">
+                            <i class="fa-solid fa-shield-halved text-white text-xl"></i>
+                        </div>
+                        <p class="text-[#0f172a] font-bold text-sm leading-tight">
+                            Private &<br>Peaceful
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Gallery Item 3 -->
+                <div class="flex flex-col items-center">
+                    <div class="w-full aspect-[4/5] rounded-[2rem] overflow-hidden shadow-md mb-6">
+                        <img src="iv_gallery_3.png" alt="Relaxing Environment" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <div class="flex items-center gap-4 w-full">
+                        <div class="w-12 h-12 bg-[#0F7A89] rounded-full flex items-center justify-center shrink-0">
+                            <i class="fa-regular fa-heart text-white text-xl"></i>
+                        </div>
+                        <p class="text-[#0f172a] font-bold text-sm leading-tight">
+                            Focused on Your<br>Well-Being
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Gallery Item 4 -->
+                <div class="flex flex-col items-center">
+                    <div class="w-full aspect-[4/5] rounded-[2rem] overflow-hidden shadow-md mb-6">
+                        <img src="iv_gallery_4.png" alt="Compassionate Care" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <div class="flex items-center gap-4 w-full">
+                        <div class="w-12 h-12 bg-[#0F7A89] rounded-full flex items-center justify-center shrink-0">
+                            <i class="fa-solid fa-user-nurse text-white text-xl"></i>
+                        </div>
+                        <p class="text-[#0f172a] font-bold text-sm leading-tight">
+                            Compassionate Care<br>You Can Trust
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-teal-700 pt-16 pb-2 mt-auto relative z-20 text-white" id="contact-us">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center">
+            <!-- Logo -->
+            <img src="logow.png" alt="FLIMC Logo" class="h-40 w-auto object-contain mb-10 hover:scale-105 transition duration-300 drop-shadow-md">
+            
+            <!-- Social Icons -->
+            <div class="flex space-x-4 mb-6">
+                <a href="https://www.facebook.com/FLIMC/" target="_blank" rel="noopener noreferrer" class="bg-white/10 text-white rounded-full w-10 h-10 flex items-center justify-center hover:bg-white/20 transition">
+                    <i class="fa-brands fa-facebook-f"></i>
+                </a>
+                <a href="https://www.instagram.com/flimcsarasota/" target="_blank" rel="noopener noreferrer" class="bg-white/10 text-white rounded-full w-10 h-10 flex items-center justify-center hover:bg-white/20 transition">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+            </div>
+
+            <!-- Contact Text -->
+            <p class="text-white text-xl font-medium mb-12 text-center">Have a question? Reach out to our team for an answer!</p>
+
+            <!-- Contact & Location -->
+            <div class="flex flex-col md:flex-row justify-center w-full gap-12 md:gap-32 text-center text-teal-50 mb-16">
+                <div>
+                    <p class="text-2xl font-black mb-2">(941) 955-6220</p>
+                    <p class="text-2xl font-black">Info@flimc.com</p>
+                </div>
+                <div>
+                    <p class="font-bold text-lg mb-1">Office Location</p>
+                    <p class="text-teal-100 text-lg">2415 University Pkwy,<br>Sarasota, FL 34243</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Copyright -->
+        <div class="border-t border-teal-600 pt-4 text-center text-teal-200 text-xs font-medium w-full mt-2 pb-2">
+            Copyright Â© 2026 flimc | <a href="#" class="hover:underline text-teal-100">Privacy Policy</a> | <a href="#" class="hover:underline text-teal-100">Terms & Conditions</a>
+        </div>
+    </footer>
+</body>
+</html>
+
+

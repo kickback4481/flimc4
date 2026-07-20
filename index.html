@@ -1,0 +1,556 @@
+﻿<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Florida Integrative Medical Center | Dr. John Monhollon</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800&family=Lato:wght@300;400;700;900&family=Great+Vibes&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Lato', 'sans-serif'],
+                        serif: ['Cinzel', 'serif'],
+                        script: ['Great Vibes', 'cursive'],
+                    },
+                    colors: {
+                        teal: {
+                            500: '#007f9c',
+                            600: '#00657e',
+                            700: '#004c5f',
+                        },
+                        blue: {
+                            50: '#f0f9fa',
+                            100: '#e0f3f6',
+                            800: '#005b76',
+                            900: '#003a4d',
+                        }
+                    },
+                    boxShadow: {
+                        'soft': '0 10px 40px -10px rgba(0,101,126,0.15)',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #e6f7fa;
+            background-image: 
+                radial-gradient(circle at 100% 0%, rgba(255,255,255,0.8) 0%, transparent 40%),
+                radial-gradient(circle at 0% 100%, rgba(255,255,255,0.8) 0%, transparent 40%),
+                linear-gradient(180deg, #d8f1f5 0%, #ffffff 40%, #ffffff 60%, #d8f1f5 100%);
+            background-attachment: fixed;
+            overflow-x: hidden;
+        }
+
+        /* Ambient Wave Graphics */
+        .ambient-wave {
+            position: absolute;
+            border-radius: 50%;
+            border: 2px solid rgba(255,255,255,0.6);
+            box-shadow: 0 0 50px rgba(255,255,255,0.5), inset 0 0 50px rgba(255,255,255,0.5);
+            z-index: -1;
+            pointer-events: none;
+        }
+        
+        .wave-1 {
+            width: 150vw;
+            height: 150vw;
+            right: -70vw;
+            top: -50vw;
+            border-width: 10px;
+            opacity: 0.3;
+        }
+        
+        .wave-2 {
+            width: 120vw;
+            height: 120vw;
+            right: -50vw;
+            top: -30vw;
+            border-width: 20px;
+            opacity: 0.5;
+        }
+
+        .wave-3 {
+            width: 200vw;
+            height: 200vw;
+            left: -100vw;
+            bottom: -80vw;
+            border-width: 15px;
+            opacity: 0.2;
+        }
+
+        @keyframes pulse-green {
+            0%, 100% {
+                box-shadow: 0 10px 40px -10px rgba(0,101,126,0.15), 0 0 15px rgba(134, 239, 172, 0.3);
+            }
+            50% {
+                box-shadow: 0 10px 40px -10px rgba(0,101,126,0.15), 0 0 35px rgba(134, 239, 172, 0.8);
+            }
+        }
+        .pulse-green-glow {
+            animation: pulse-green 3s infinite ease-in-out;
+        }
+    </style>
+</head>
+<body class="overflow-x-hidden font-sans text-gray-800 antialiased relative min-h-screen">
+
+    <!-- Decorative Background Elements -->
+    <div class="absolute inset-0 overflow-hidden pointer-events-none -z-10">
+        <div class="ambient-wave wave-1"></div>
+        <div class="ambient-wave wave-2"></div>
+        <div class="ambient-wave wave-3"></div>
+    </div>
+
+    <!-- Header -->
+    <header class="w-full absolute top-0 left-0 right-0 z-50 pt-6 px-6 md:px-16 flex justify-end items-start max-w-[1400px] mx-auto">
+        
+        <!-- Mobile Menu Toggle -->
+        <div class="flex flex-col items-center cursor-pointer group mt-2 relative" onclick="document.getElementById('mobile-menu').classList.toggle('hidden')">
+            <div class="bg-teal-600 text-white rounded-xl p-3 h-12 w-12 flex items-center justify-center group-hover:bg-teal-700 shadow-lg transition-all duration-300">
+                <i class="fa-solid fa-bars text-2xl"></i>
+            </div>
+            <span class="text-teal-600 font-bold text-sm mt-2 tracking-widest">MENU</span>
+            
+            <!-- Mobile Menu Dropdown -->
+            <div id="mobile-menu" class="hidden absolute top-20 right-0 w-64 bg-white/95 backdrop-blur-xl shadow-2xl rounded-2xl p-6 z-50 border border-teal-100 flex flex-col space-y-4 text-left">
+                <a href="index.html" class="text-[#003a4d] font-bold text-base hover:text-teal-600 transition border-b border-gray-100 pb-2">Home</a>
+                <a href="conditions.html" class="text-[#003a4d] font-bold text-base hover:text-teal-600 transition border-b border-gray-100 pb-2">Conditions</a>
+                  <a href="personalized-care.html" class="text-[#003a4d] font-bold text-base hover:text-teal-600 transition border-b border-gray-100 pb-2">Personalized Care</a>
+                <a href="iv-room.html" class="text-[#003a4d] font-bold text-base hover:text-teal-600 transition border-b border-gray-100 pb-2">IV Room</a>
+                  <a href="lyme-disease-care.html" class="text-[#003a4d] font-bold text-base hover:text-teal-600 transition border-b border-gray-100 pb-2">Lyme Disease Care</a>
+                <a href="therapies.html" class="text-[#003a4d] font-bold text-base hover:text-teal-600 transition border-b border-gray-100 pb-2 hidden">Therapies</a>
+                
+                <!-- Therapies Dropdown -->
+                <div class="border-b border-gray-100 pb-2">
+                    <button class="text-[#003a4d] font-bold text-base hover:text-teal-600 transition w-full text-left flex justify-between items-center" onclick="event.stopPropagation(); document.getElementById('therapies-menu-list').classList.toggle('hidden')">
+                        Therapies <i class="fa-solid fa-chevron-down text-xs"></i>
+                    </button>
+                    <div id="therapies-menu-list" class="hidden flex-col space-y-3 mt-3 pl-4 border-l-2 border-teal-100 max-h-48 overflow-y-auto">
+                        <a href="faq.html" class="block text-sm text-[#003a4d] hover:text-teal-600 transition">FAQ</a>
+                        <a href="eboo.html" class="block text-sm text-[#003a4d] hover:text-teal-600 transition">EBOO</a>
+                        <a href="ebo2.html" class="block text-sm text-[#003a4d] hover:text-teal-600 transition">EBO2</a>
+                        <a href="ozone-therapy.html" class="block text-sm text-[#003a4d] hover:text-teal-600 transition">Ozone Therapy</a>
+                        <a href="ubi-therapy.html" class="block text-sm text-[#003a4d] hover:text-teal-600 transition">UBI Therapy</a>
+                        <a href="vitamin-c.html" class="block text-sm text-[#003a4d] hover:text-teal-600 transition">Vitamin C</a>
+                        <a href="myers-cocktail.html" class="block text-sm text-[#003a4d] hover:text-teal-600 transition">Myers Cocktail</a>
+                        <a href="flu-defense.html" class="block text-sm text-[#003a4d] hover:text-teal-600 transition">Flu Defense</a>
+                        <a href="vitality.html" class="block text-sm text-[#003a4d] hover:text-teal-600 transition">Vitality</a>
+                        <a href="glutathione.html" class="block text-sm text-[#003a4d] hover:text-teal-600 transition">Glutathione</a>
+                        <a href="egcg.html" class="block text-sm text-[#003a4d] hover:text-teal-600 transition">EGCG</a>
+                        <a href="migraine-defense.html" class="block text-sm text-[#003a4d] hover:text-teal-600 transition">Migraine Defense</a>
+                        <a href="chelation-therapy.html" class="block text-sm text-[#003a4d] hover:text-teal-600 transition">Chelation Therapy</a>
+                        <a href="ubi-with-ozone.html" class="block text-sm text-[#003a4d] hover:text-teal-600 transition">UBI with Ozone</a>
+                        <a href="5-pass-ozone.html" class="block text-sm text-[#003a4d] hover:text-teal-600 transition">5-Pass Ozone Therapy</a>
+                        <a href="iv-antibiotics.html" class="block text-sm text-[#003a4d] hover:text-teal-600 transition">IV Antibiotics</a>
+                        <a href="iv-iron.html" class="block text-sm text-[#003a4d] hover:text-teal-600 transition">IV Iron</a>
+                        <a href="silver-infusion.html" class="block text-sm text-[#003a4d] hover:text-teal-600 transition">Silver Infusion</a>
+                    </div>
+                </div>
+                <a href="about.html" class="text-[#003a4d] font-bold text-base hover:text-teal-600 transition border-b border-gray-100 pb-2">About</a>
+                <a href="team.html" class="text-[#003a4d] font-bold text-base hover:text-teal-600 transition border-b border-gray-100 pb-2">Meet Our Team</a>
+                <a href="testimonials.html" class="text-[#003a4d] font-bold text-base hover:text-teal-600 transition border-b border-gray-100 pb-2">Testimonials</a>
+                <a href="#contact-us" class="bg-teal-600 text-white text-center font-bold text-base py-2 rounded-xl hover:bg-teal-700 shadow-md transition mt-2">Book Now</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative w-full z-10 overflow-hidden bg-white">
+        <img src="MEDICAL PRJ.jpg" alt="Florida Integrative Medical Center" class="w-full h-auto object-cover">
+        
+        <!-- Buttons Overlay -->
+        <div class="absolute bottom-12 md:bottom-20 lg:bottom-24 right-[4%] md:right-[8%] lg:right-[12%] flex flex-col sm:flex-row gap-3 md:gap-4 z-30">
+            <a href="#contact-us" class="bg-[#00657e] text-white font-bold py-2.5 md:py-3.5 px-5 md:px-7 rounded-md hover:bg-[#004c5f] transition flex items-center justify-center text-xs md:text-sm shadow-xl tracking-wide border border-[#00657e]">
+                SCHEDULE YOUR CONSULTATION <i class="fa-solid fa-chevron-right ml-2 md:ml-3"></i>
+            </a>
+            <a href="about.html" class="bg-white text-[#00657e] font-bold py-2.5 md:py-3.5 px-5 md:px-7 rounded-md hover:bg-gray-50 transition flex items-center justify-center text-xs md:text-sm shadow-xl tracking-wide border border-gray-100">
+                MEET DR. MONHOLLON <i class="fa-solid fa-chevron-right ml-2 md:ml-3"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="relative z-20 w-full max-w-[1400px] mx-auto px-4 sm:px-6 md:px-16 pt-16 pb-12">
+        <div class="bg-white/60 backdrop-blur-xl border border-white/80 rounded-3xl p-4 shadow-soft pulse-green-glow">
+            <div class="flex flex-wrap justify-center gap-4">
+                <!-- Card 1 -->
+                <div class="w-full sm:w-[48%] lg:flex-1 bg-gradient-to-b from-white to-blue-50/30 rounded-2xl p-6 text-center shadow-sm hover:shadow-md transition duration-300 border border-white">
+                    <div class="w-16 h-16 mx-auto mb-4 text-teal-600 text-4xl flex items-center justify-center">
+                        <i class="fa-solid fa-dna drop-shadow-md"></i>
+                    </div>
+                    <h4 class="text-teal-700 font-serif font-bold text-sm mb-3 h-10 flex items-center justify-center leading-tight tracking-wide">ROOT CAUSE<br>MEDICINE</h4>
+                    <p class="text-[#003a4d] font-semibold text-xs leading-relaxed">We identify and address the root causes of illness, not just the symptoms.</p>
+                </div>
+                <!-- Card 2 -->
+                <div class="w-full sm:w-[48%] lg:flex-1 bg-gradient-to-b from-white to-blue-50/30 rounded-2xl p-6 text-center shadow-sm hover:shadow-md transition duration-300 border border-white">
+                    <div class="w-16 h-16 mx-auto mb-4 text-teal-600 text-4xl flex items-center justify-center">
+                        <i class="fa-solid fa-pump-medical drop-shadow-md"></i>
+                    </div>
+                    <h4 class="text-teal-700 font-serif font-bold text-sm mb-3 h-10 flex items-center justify-center leading-tight tracking-wide">ADVANCED<br>IV THERAPIES</h4>
+                    <p class="text-[#003a4d] font-semibold text-xs leading-relaxed">Physician-formulated IV therapies to support your unique needs.</p>
+                </div>
+                <!-- Card 3 -->
+                <div class="w-full sm:w-[48%] lg:flex-1 bg-gradient-to-b from-white to-blue-50/30 rounded-2xl p-6 text-center shadow-sm hover:shadow-md transition duration-300 border border-white">
+                    <div class="w-16 h-16 mx-auto mb-4 text-teal-600 text-4xl flex items-center justify-center">
+                        <i class="fa-solid fa-droplet drop-shadow-md"></i>
+                    </div>
+                    <h4 class="text-teal-700 font-serif font-bold text-sm mb-3 h-10 flex items-center justify-center leading-tight tracking-wide">EBOO & BLOOD<br>THERAPIES</h4>
+                    <p class="text-[#003a4d] font-semibold text-xs leading-relaxed">Innovative blood-based therapies that support cellular healing.</p>
+                </div>
+                <!-- Card 4 -->
+                <div class="w-full sm:w-[48%] lg:flex-1 bg-gradient-to-b from-white to-blue-50/30 rounded-2xl p-6 text-center shadow-sm hover:shadow-md transition duration-300 border border-white">
+                    <div class="w-16 h-16 mx-auto mb-4 text-teal-600 text-4xl flex items-center justify-center">
+                        <i class="fa-solid fa-user-doctor drop-shadow-md"></i>
+                    </div>
+                    <h4 class="text-teal-700 font-serif font-bold text-sm mb-3 h-10 flex items-center justify-center leading-tight tracking-wide">PERSONALIZED<br>CARE</h4>
+                    <p class="text-[#003a4d] font-semibold text-xs leading-relaxed">Customized plans designed for your body, your goals, your life.</p>
+                </div>
+                <!-- Card 5 -->
+                <div class="w-full sm:w-[48%] lg:flex-1 bg-gradient-to-b from-white to-blue-50/30 rounded-2xl p-6 text-center shadow-sm hover:shadow-md transition duration-300 border border-white">
+                    <div class="w-16 h-16 mx-auto mb-4 text-teal-600 text-4xl flex items-center justify-center">
+                        <i class="fa-solid fa-spa drop-shadow-md"></i>
+                    </div>
+                    <h4 class="text-teal-700 font-serif font-bold text-sm mb-3 h-10 flex items-center justify-center leading-tight tracking-wide">WELLNESS<br>WEEK PROGRAMS</h4>
+                    <p class="text-[#003a4d] font-semibold text-xs leading-relaxed">Immersive programs designed to restore, renew and recharge.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Therapies Section -->
+    <section class="py-12 w-full max-w-[1400px] mx-auto px-4 sm:px-6 md:px-16 text-center relative z-20">
+        <div class="flex items-center justify-center mb-10 max-w-4xl mx-auto">
+            <div class="flex-grow border-t-2 border-teal-600/30"></div>
+            <h2 class="px-8 text-teal-700 font-serif text-2xl md:text-3xl font-bold tracking-[0.15em]">FEATURED THERAPIES</h2>
+            <div class="flex-grow border-t-2 border-teal-600/30"></div>
+        </div>
+        <div class="relative flex items-center justify-center px-12 mt-12 w-full group">
+            <!-- Left Arrow -->
+            <button class="absolute left-0 w-10 h-10 rounded-full bg-teal-600 text-white flex items-center justify-center hover:bg-teal-700 shadow-lg z-10 transition hover:scale-110" onclick="document.getElementById('therapies-scroll').scrollBy({left: -200, behavior: 'smooth'})">
+                <i class="fa-solid fa-chevron-left"></i>
+            </button>
+
+            <!-- Carousel Items -->
+            <div id="therapies-scroll" class="flex overflow-x-auto snap-x snap-mandatory gap-4 w-full py-4 scroll-smooth" style="scrollbar-width: none; -ms-overflow-style: none;">
+                <!-- Therapy 1 -->
+                <div class="min-w-[160px] md:min-w-[180px] snap-center bg-gradient-to-b from-white to-blue-50/50 border border-white/60 rounded-2xl p-4 flex flex-col items-center shadow-soft hover:-translate-y-1 transition duration-300">
+                    <img src="Photo with Gold Outline-01.jpg" onerror="this.src='vitamin-c.html'" class="w-full h-32 rounded-xl object-contain mb-4 shadow-sm">
+                    <h4 class="text-teal-700 font-bold text-[11px] leading-tight mb-2 h-8 flex items-center justify-center">VITAMIN C<br>IV THERAPY</h4>
+                    <a href="vitamin-c.html" class="text-teal-500 text-[10px] font-bold hover:text-teal-700 tracking-wider">LEARN MORE &rarr;</a>
+                </div>
+                <!-- Therapy 2 -->
+                <div class="min-w-[160px] md:min-w-[180px] snap-center bg-gradient-to-b from-white to-blue-50/50 border border-white/60 rounded-2xl p-4 flex flex-col items-center shadow-soft hover:-translate-y-1 transition duration-300">
+                    <img src="Photo with Gold Outline-02.jpg" onerror="this.src='myers-cocktail.html'" class="w-full h-32 rounded-xl object-contain mb-4 shadow-sm">
+                    <h4 class="text-teal-700 font-bold text-[11px] leading-tight mb-2 h-8 flex items-center justify-center">MYERS<br>COCKTAIL</h4>
+                    <a href="myers-cocktail.html" class="text-teal-500 text-[10px] font-bold hover:text-teal-700 tracking-wider">LEARN MORE &rarr;</a>
+                </div>
+                <!-- Therapy 3 -->
+                <div class="min-w-[160px] md:min-w-[180px] snap-center bg-gradient-to-b from-white to-blue-50/50 border border-white/60 rounded-2xl p-4 flex flex-col items-center shadow-soft hover:-translate-y-1 transition duration-300">
+                    <img src="Photo with Gold Outline-03.jpg" onerror="this.src='nad.html'" class="w-full h-32 rounded-xl object-contain mb-4 shadow-sm">
+                    <h4 class="text-teal-700 font-bold text-[11px] leading-tight mb-2 h-8 flex items-center justify-center">NAD+<br>THERAPY</h4>
+                    <a href="nad.html" class="text-teal-500 text-[10px] font-bold hover:text-teal-700 tracking-wider">LEARN MORE &rarr;</a>
+                </div>
+                <!-- Therapy 4 -->
+                <div class="min-w-[160px] md:min-w-[180px] snap-center bg-gradient-to-b from-white to-blue-50/50 border border-white/60 rounded-2xl p-4 flex flex-col items-center shadow-soft hover:-translate-y-1 transition duration-300">
+                    <img src="Photo with Gold Outline-04.jpg" onerror="this.src='glutathione.html'" class="w-full h-32 rounded-xl object-contain mb-4 shadow-sm">
+                    <h4 class="text-teal-700 font-bold text-[11px] leading-tight mb-2 h-8 flex items-center justify-center">GLUTATHIONE<br>IV THERAPY</h4>
+                    <a href="glutathione.html" class="text-teal-500 text-[10px] font-bold hover:text-teal-700 tracking-wider">LEARN MORE &rarr;</a>
+                </div>
+                <!-- Therapy 5 -->
+                <div class="min-w-[160px] md:min-w-[180px] snap-center bg-gradient-to-b from-white to-blue-50/50 border border-white/60 rounded-2xl p-4 flex flex-col items-center shadow-soft hover:-translate-y-1 transition duration-300">
+                    <img src="Photo with Gold Outline-09.jpg" onerror="this.src='eboo.html'" class="w-full h-32 rounded-xl object-contain mb-4 shadow-sm">
+                    <h4 class="text-teal-700 font-bold text-[11px] leading-tight mb-2 h-8 flex items-center justify-center">EBOO<br>THERAPY</h4>
+                    <a href="eboo.html" class="text-teal-500 text-[10px] font-bold hover:text-teal-700 tracking-wider">LEARN MORE &rarr;</a>
+                </div>
+                <!-- Therapy 6 -->
+                <div class="min-w-[160px] md:min-w-[180px] snap-center bg-gradient-to-b from-white to-blue-50/50 border border-white/60 rounded-2xl p-4 flex flex-col items-center shadow-soft hover:-translate-y-1 transition duration-300">
+                    <img src="Photo with Gold Outline-12.jpg" onerror="this.src='ubi-therapy.html'" class="w-full h-32 rounded-xl object-contain mb-4 shadow-sm">
+                    <h4 class="text-teal-700 font-bold text-[11px] leading-tight mb-2 h-8 flex items-center justify-center">UBI<br>THERAPY</h4>
+                    <a href="ubi-therapy.html" class="text-teal-500 text-[10px] font-bold hover:text-teal-700 tracking-wider">LEARN MORE &rarr;</a>
+                </div>
+                <!-- Therapy 7 -->
+                <div class="min-w-[160px] md:min-w-[180px] snap-center bg-gradient-to-b from-white to-blue-50/50 border border-white/60 rounded-2xl p-4 flex flex-col items-center shadow-soft hover:-translate-y-1 transition duration-300">
+                    <img src="hydrogen peroxide iv.png" onerror="this.src='iv-infusion.png'" class="w-full h-32 rounded-xl object-contain mb-4 shadow-sm">
+                    <h4 class="text-teal-700 font-bold text-[11px] leading-tight mb-2 h-8 flex items-center justify-center">HYDROGEN<br>PEROXIDE IV</h4>
+                    <a href="silver-infusion.html" class="text-teal-500 text-[10px] font-bold hover:text-teal-700 tracking-wider">LEARN MORE &rarr;</a>
+                </div>
+                <!-- Therapy 8 -->
+                <div class="min-w-[160px] md:min-w-[180px] snap-center bg-gradient-to-b from-white to-blue-50/50 border border-white/60 rounded-2xl p-4 flex flex-col items-center shadow-soft hover:-translate-y-1 transition duration-300">
+                    <img src="Photo with Gold Outline-06.jpg" onerror="this.src='ozone-therapy.png'" class="w-full h-32 rounded-xl object-contain mb-4 shadow-sm">
+                    <h4 class="text-teal-700 font-bold text-[11px] leading-tight mb-2 h-8 flex items-center justify-center">OZONE<br>THERAPY</h4>
+                    <a href="ozone-therapy.html" class="text-teal-500 text-[10px] font-bold hover:text-teal-700 tracking-wider">LEARN MORE &rarr;</a>
+                </div>
+            </div>
+
+            <!-- Right Arrow -->
+            <button class="absolute right-0 w-10 h-10 rounded-full bg-teal-600 text-white flex items-center justify-center hover:bg-teal-700 shadow-lg z-10 transition hover:scale-110" onclick="document.getElementById('therapies-scroll').scrollBy({left: 200, behavior: 'smooth'})">
+                <i class="fa-solid fa-chevron-right"></i>
+            </button>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="py-16 w-full max-w-[1400px] mx-auto px-4 sm:px-6 md:px-16 text-center relative z-20">
+        <h2 class="text-teal-700 font-serif text-2xl md:text-3xl font-bold tracking-[0.1em] mb-12">WHAT OUR PATIENTS ARE SAYING</h2>
+        
+        <div class="relative flex items-center justify-center px-12 w-full group">
+            <!-- Left Arrow -->
+            <button class="absolute left-0 w-10 h-10 rounded-full bg-teal-600 text-white flex items-center justify-center hover:bg-teal-700 shadow-lg z-10 transition hover:scale-110" onclick="document.getElementById('testimonials-scroll').scrollBy({left: -300, behavior: 'smooth'})">
+                <i class="fa-solid fa-chevron-left"></i>
+            </button>
+
+            <div id="testimonials-scroll" class="flex overflow-x-auto snap-x snap-mandatory gap-6 w-full py-4 scroll-smooth" style="scrollbar-width: none; -ms-overflow-style: none;">
+                <!-- Testimonial 1 -->
+                <div class="min-w-[300px] md:min-w-[400px] snap-center bg-white/70 backdrop-blur-md border border-white/80 rounded-3xl p-8 shadow-soft flex flex-col md:flex-row text-left gap-6 hover:shadow-lg transition">
+                    <img src="https://flimc.com/wp-content/uploads/2026/04/Linda-Beggs.jpg" onerror="this.src='linda.jpg'" class="w-20 h-20 rounded-full object-cover shadow-md flex-shrink-0 border-2 border-white">
+                    <div class="flex flex-col justify-center">
+                        <div class="text-teal-600 text-sm mb-3">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="text-[#003a4d] text-sm font-semibold leading-relaxed mb-4">
+                            "When I first arrived at Florida Integrative Medical Center I was hopeless. Now I have my life back! Thanks for all of the meticulous expert care I received."
+                        </p>
+                        <h5 class="text-teal-600 font-bold text-xs uppercase tracking-wide">- LINDA BEGGS</h5>
+                        <span class="text-teal-500 text-[10px] font-bold tracking-wider mt-1">VERIFIED PATIENT</span>
+                    </div>
+                </div>
+                <!-- Testimonial 2 -->
+                <div class="min-w-[300px] md:min-w-[400px] snap-center bg-white/70 backdrop-blur-md border border-white/80 rounded-3xl p-8 shadow-soft flex flex-col md:flex-row text-left gap-6 hover:shadow-lg transition">
+                    <img src="https://flimc.com/wp-content/uploads/2025/05/Courtney-340x340-1.webp" onerror="this.src='doctor-photo.jpg'" class="w-20 h-20 rounded-full object-cover shadow-md flex-shrink-0 border-2 border-white">
+                    <div class="flex flex-col justify-center">
+                        <div class="text-teal-600 text-sm mb-3">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="text-[#003a4d] text-sm font-semibold leading-relaxed mb-4">
+                            "Florida Integrative Medical Center gave me my life back. I have never met finer doctors, techs, and staff in my life. I feel better than I have in YEARS."
+                        </p>
+                        <h5 class="text-teal-600 font-bold text-xs uppercase tracking-wide">- COURTNEY H.</h5>
+                        <span class="text-teal-500 text-[10px] font-bold tracking-wider mt-1">VERIFIED PATIENT</span>
+                    </div>
+                </div>
+                <!-- Testimonial 3 -->
+                <div class="min-w-[300px] md:min-w-[400px] snap-center bg-white/70 backdrop-blur-md border border-white/80 rounded-3xl p-8 shadow-soft flex flex-col md:flex-row text-left gap-6 hover:shadow-lg transition">
+                    <img src="https://flimc.com/wp-content/uploads/2025/05/prince-340x340-1.png" onerror="this.src='prince.jpg'" class="w-20 h-20 rounded-full object-cover shadow-md flex-shrink-0 border-2 border-white">
+                    <div class="flex flex-col justify-center">
+                        <div class="text-teal-600 text-sm mb-3">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="text-[#003a4d] text-sm font-semibold leading-relaxed mb-4">
+                            "The level of care and attention I received here is unlike anywhere else. Truly world class. I highly encourage anyone with complex chronic illnesses to reach out."
+                        </p>
+                        <h5 class="text-teal-600 font-bold text-xs uppercase tracking-wide">- PRINCE MATHARU</h5>
+                        <span class="text-teal-500 text-[10px] font-bold tracking-wider mt-1">VERIFIED PATIENT</span>
+                    </div>
+                </div>
+                <!-- Testimonial 4 -->
+                <div class="min-w-[300px] md:min-w-[400px] snap-center bg-white/70 backdrop-blur-md border border-white/80 rounded-3xl p-8 shadow-soft flex flex-col md:flex-row text-left gap-6 hover:shadow-lg transition">
+                    <img src="https://flimc.com/wp-content/uploads/2025/06/Lori-B.webp" onerror="this.src='doctor-photo.jpg'" class="w-20 h-20 rounded-full object-cover shadow-md flex-shrink-0 border-2 border-white">
+                    <div class="flex flex-col justify-center">
+                        <div class="text-teal-600 text-sm mb-3">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="text-[#003a4d] text-sm font-semibold leading-relaxed mb-4">
+                            "Four months post-SOT, I tested negative for Borrelia and all my symptoms disappeared. Thank you, FLIMC and Dr. Monhollon, for giving me my life back!"
+                        </p>
+                        <h5 class="text-teal-600 font-bold text-xs uppercase tracking-wide">- LORI B.</h5>
+                        <span class="text-teal-500 text-[10px] font-bold tracking-wider mt-1">VERIFIED PATIENT</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Arrow -->
+            <button class="absolute right-0 w-10 h-10 rounded-full bg-teal-600 text-white flex items-center justify-center hover:bg-teal-700 shadow-lg z-10 transition hover:scale-110" onclick="document.getElementById('testimonials-scroll').scrollBy({left: 300, behavior: 'smooth'})">
+                <i class="fa-solid fa-chevron-right"></i>
+            </button>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-16 w-full max-w-[1400px] mx-auto px-6 md:px-16 mt-4 mb-16 relative z-20">
+        <div class="flex flex-col md:flex-row items-center justify-between">
+            <div class="mb-8 md:mb-0 text-center md:text-left">
+                <h2 class="text-teal-700 font-serif text-3xl md:text-4xl font-bold tracking-wider mb-2">READY TO BEGIN YOUR<br>WELLNESS JOURNEY?</h2>
+                <p class="text-[#003a4d] font-bold text-base md:text-lg italic font-serif">We are here to help you feel better, live better, and thrive.</p>
+            </div>
+            <a href="#" class="bg-teal-600 text-white font-bold py-5 px-10 rounded-xl hover:bg-teal-700 transition flex items-center justify-between shadow-xl hover:shadow-2xl hover:-translate-y-1 text-sm tracking-wide">
+                SCHEDULE YOUR CONSULTATION TODAY! <i class="fa-solid fa-chevron-right ml-4"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- 3 Simple Steps Section -->
+    <section class="py-24 relative z-20" style="background-color: #eaf6f8;">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl font-bold italic text-[#003a4d] mb-12 font-serif">Take Control of Your Health in 3 Simple Steps</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+                <!-- Step 1 -->
+                <div class="bg-white/80 backdrop-blur-sm border border-white rounded-3xl p-8 shadow-soft flex flex-col items-center justify-center min-h-[250px] hover:-translate-y-1 transition duration-300">
+                    <h3 class="text-xl font-bold text-teal-700 mb-4 font-serif">Request an<br>Appointment Today</h3>
+                    <div class="w-16 h-0.5 bg-teal-300 mb-6"></div>
+                    <p class="text-[#003a4d] text-sm">Speak with our care team in Sarasota about your health concerns.</p>
+                </div>
+                <!-- Step 2 -->
+                <div class="bg-white/80 backdrop-blur-sm border border-white rounded-3xl p-8 shadow-soft flex flex-col items-center justify-center min-h-[250px] hover:-translate-y-1 transition duration-300">
+                    <h3 class="text-xl font-bold text-teal-700 mb-4 font-serif">Receive a Personalized<br>Health Plan</h3>
+                    <div class="w-16 h-0.5 bg-teal-300 mb-6"></div>
+                    <p class="text-[#003a4d] text-sm">We develop a plan using diagnostics and natural health approaches tailored to your needs.</p>
+                </div>
+                <!-- Step 3 -->
+                <div class="bg-white/80 backdrop-blur-sm border border-white rounded-3xl p-8 shadow-soft flex flex-col items-center justify-center min-h-[250px] hover:-translate-y-1 transition duration-300">
+                    <h3 class="text-xl font-bold text-teal-700 mb-4 font-serif">Work Towards<br>Improved Wellness</h3>
+                    <div class="w-16 h-0.5 bg-teal-300 mb-6"></div>
+                    <p class="text-[#003a4d] text-sm">Our team supports you every step of the way as you pursue your health goals.</p>
+                </div>
+            </div>
+            
+            <a href="#contact-us" class="inline-block bg-[#003a4d] text-white font-bold py-4 px-10 rounded-xl text-lg hover:bg-teal-900 transition duration-300 shadow-xl tracking-wide">
+                Schedule My Consultation
+            </a>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-24 relative z-20">
+        <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl md:text-4xl font-bold text-center text-teal-700 mb-12 font-serif">Frequently Asked Questions</h2>
+            
+            <div class="space-y-4">
+                <!-- FAQ Item 1 -->
+                <details class="bg-white/80 backdrop-blur-sm border border-white rounded-2xl shadow-soft group" open>
+                    <summary class="flex justify-between items-center cursor-pointer p-6 list-none hover:bg-white/90 transition rounded-2xl marker:hidden">
+                        <h4 class="text-lg font-bold text-teal-700 font-serif">What is functional medicine?</h4>
+                        <div class="bg-teal-600 text-white rounded-full w-8 h-8 flex items-center justify-center group-open:rotate-180 transition-transform duration-300 shadow-md">
+                            <i class="fa-solid fa-chevron-down text-sm"></i>
+                        </div>
+                    </summary>
+                    <div class="px-6 pb-6 text-[#003a4d] text-sm leading-relaxed pt-2 font-medium">
+                        Functional medicine looks beyond symptoms to understand underlying factors that may be affecting your health. At Florida Integrative Medical Center, this approach is paired with personalized care plans, diagnostics, and ongoing support.
+                    </div>
+                </details>
+                
+                <!-- FAQ Item 2 -->
+                <details class="bg-white/80 backdrop-blur-sm border border-white rounded-2xl shadow-soft group">
+                    <summary class="flex justify-between items-center cursor-pointer p-6 list-none hover:bg-white/90 transition rounded-2xl marker:hidden">
+                        <h4 class="text-lg font-bold text-teal-700 font-serif">What services does FLIMC offer?</h4>
+                        <div class="bg-teal-600 text-white rounded-full w-8 h-8 flex items-center justify-center group-open:rotate-180 transition-transform duration-300 shadow-md">
+                            <i class="fa-solid fa-chevron-down text-sm"></i>
+                        </div>
+                    </summary>
+                    <div class="px-6 pb-6 text-[#003a4d] text-sm leading-relaxed pt-2 font-medium">
+                        FLIMC offers primary care, IV and infusion therapies, and Wellness Week programs designed to support individualized health and wellness goals.
+                    </div>
+                </details>
+
+                <!-- FAQ Item 3 -->
+                <details class="bg-white/80 backdrop-blur-sm border border-white rounded-2xl shadow-soft group">
+                    <summary class="flex justify-between items-center cursor-pointer p-6 list-none hover:bg-white/90 transition rounded-2xl marker:hidden">
+                        <h4 class="text-lg font-bold text-teal-700 font-serif">What are infusion therapies?</h4>
+                        <div class="bg-teal-600 text-white rounded-full w-8 h-8 flex items-center justify-center group-open:rotate-180 transition-transform duration-300 shadow-md">
+                            <i class="fa-solid fa-chevron-down text-sm"></i>
+                        </div>
+                    </summary>
+                    <div class="px-6 pb-6 text-[#003a4d] text-sm leading-relaxed pt-2 font-medium">
+                        Infusion therapies deliver nutrients directly into the bloodstream for efficient absorption. At FLIMC, services include options such as Vitamin C, MyersÃ¢â‚¬â„¢ Cocktail, NAD+, and other customized nutrient blends based on individual needs.
+                    </div>
+                </details>
+
+                <!-- FAQ Item 4 -->
+                <details class="bg-white/80 backdrop-blur-sm border border-white rounded-2xl shadow-soft group">
+                    <summary class="flex justify-between items-center cursor-pointer p-6 list-none hover:bg-white/90 transition rounded-2xl marker:hidden">
+                        <h4 class="text-lg font-bold text-teal-700 font-serif">What is Wellness Week?</h4>
+                        <div class="bg-teal-600 text-white rounded-full w-8 h-8 flex items-center justify-center group-open:rotate-180 transition-transform duration-300 shadow-md">
+                            <i class="fa-solid fa-chevron-down text-sm"></i>
+                        </div>
+                    </summary>
+                    <div class="px-6 pb-6 text-[#003a4d] text-sm leading-relaxed pt-2 font-medium">
+                        Wellness Week is a 5-day intensive program that includes consultation, lab testing, diagnostics, customized infusion therapy, and personalized care planning.
+                    </div>
+                </details>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-teal-700 pt-16 pb-2 mt-auto relative z-20 text-white" id="contact-us">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center">
+            <!-- Logo -->
+            <img src="logow.png" alt="FLIMC Logo" class="h-40 w-auto object-contain mb-10 hover:scale-105 transition duration-300 drop-shadow-md">
+            
+            <!-- Social Icons -->
+            <div class="flex space-x-4 mb-6">
+                <a href="https://www.facebook.com/FLIMC/" target="_blank" rel="noopener noreferrer" class="bg-white/10 text-white rounded-full w-10 h-10 flex items-center justify-center hover:bg-white/20 transition">
+                    <i class="fa-brands fa-facebook-f"></i>
+                </a>
+                <a href="https://www.instagram.com/flimcsarasota/" target="_blank" rel="noopener noreferrer" class="bg-white/10 text-white rounded-full w-10 h-10 flex items-center justify-center hover:bg-white/20 transition">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+            </div>
+
+            <!-- Contact Text -->
+            <p class="text-white text-xl font-medium mb-12 text-center">Have a question? Reach out to our team for an answer!</p>
+
+            <!-- Contact & Location -->
+            <div class="flex flex-col md:flex-row justify-center w-full gap-12 md:gap-32 text-center text-teal-50 mb-16">
+                <div>
+                    <p class="text-2xl font-black mb-2">(941) 955-6220</p>
+                    <p class="text-2xl font-black">Info@flimc.com</p>
+                </div>
+                <div>
+                    <p class="font-bold text-lg mb-1">Office Location</p>
+                    <p class="text-teal-100 text-lg">2415 University Pkwy,<br>Sarasota, FL 34243</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Copyright -->
+        <div class="border-t border-teal-600 pt-4 text-center text-teal-200 text-xs font-medium w-full mt-2 pb-2">
+            Copyright Ã‚Â© 2026 flimc | <a href="#" class="hover:underline text-teal-100">Privacy Policy</a> | <a href="#" class="hover:underline text-teal-100">Terms & Conditions</a>
+        </div>
+    </footer>
+
+    <script>
+        // Auto-scroll logic for Carousels
+        function setupAutoScroll(containerId, intervalMs, scrollAmount) {
+            const container = document.getElementById(containerId);
+            if (!container) return;
+            
+            let isHovered = false;
+            // Pause auto-scroll on hover or touch
+            container.addEventListener('mouseenter', () => isHovered = true);
+            container.addEventListener('mouseleave', () => isHovered = false);
+            container.addEventListener('touchstart', () => isHovered = true);
+            container.addEventListener('touchend', () => isHovered = false);
+            
+            setInterval(() => {
+                if (!isHovered) {
+                    // Loop back to start if at the end
+                    if (container.scrollLeft + container.clientWidth >= container.scrollWidth - 10) {
+                        container.scrollTo({left: 0, behavior: 'smooth'}); 
+                    } else {
+                        // Scroll forward
+                        container.scrollBy({left: scrollAmount, behavior: 'smooth'});
+                    }
+                }
+            }, intervalMs);
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            // Scroll therapies and testimonials every 5 seconds
+            setupAutoScroll('therapies-scroll', 5000, 300);
+            setupAutoScroll('testimonials-scroll', 5000, 400);
+        });
+    </script>
+</body>
+</html>
+
+
+
+
+
+

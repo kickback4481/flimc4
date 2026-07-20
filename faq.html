@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frequently Asked Questions | Florida Integrative Medical Center</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Dancing+Script:wght@600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Outfit', 'sans-serif'],
+                        inter: ['Inter', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                        cursive: ['Dancing Script', 'cursive'],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-sans text-gray-800 antialiased bg-[#e4f6f9] flex flex-col min-h-screen relative overflow-x-hidden">
+
+    <!-- Glowing Waves Background -->
+    <div class="fixed top-0 right-0 w-full h-full pointer-events-none overflow-hidden z-0">
+        <!-- We use absolute positioning to place the glowing wave image creatively -->
+        <img src="bottom images.png" alt="" class="absolute top-[20%] right-[-10%] w-[80%] opacity-40 mix-blend-screen transform rotate-45 scale-150">
+    </div>
+
+    <!-- Header -->
+    <header class="w-full bg-white shadow-sm relative z-50 pt-4 pb-4 px-6 md:px-16 flex justify-between items-center mx-auto">
+        <div class="flex items-center gap-4">
+            <a href="index.html" class="flex items-center gap-4">
+                <img src="logo.png" alt="Florida Integrative Medical Center" onerror="this.src='logow.png'" class="w-16 md:w-20 h-auto">
+                <div class="hidden md:block">
+                    <h1 class="text-xl md:text-2xl font-serif font-bold text-[#00657e] leading-tight tracking-wide">FLORIDA INTEGRATIVE<br><span class="text-gray-500">MEDICAL CENTER</span></h1>
+                </div>
+            </a>
+        </div>
+        
+        <!-- Mobile Menu Toggle -->
+        <div class="flex flex-col items-center cursor-pointer relative" onclick="document.getElementById('mobile-menu').classList.toggle('hidden')">
+            <div class="text-[#00657e] p-2 flex items-center justify-center hover:opacity-80 transition-all duration-300">
+                <i class="fa-solid fa-bars text-3xl md:text-4xl"></i>
+            </div>
+            
+            <!-- Mobile Menu Dropdown -->
+            <div id="mobile-menu" class="hidden absolute top-14 right-0 w-64 bg-white/95 backdrop-blur-xl shadow-2xl rounded-2xl p-6 z-50 border border-teal-100 flex flex-col space-y-4 text-left">
+                <a href="index.html" class="text-[#003a4d] font-bold text-base hover:text-teal-600 transition border-b border-gray-100 pb-2">Home</a>
+                <a href="conditions.html" class="text-[#003a4d] font-bold text-base hover:text-teal-600 transition border-b border-gray-100 pb-2">Conditions</a>
+                <a href="personalized-care.html" class="text-[#003a4d] font-bold text-base hover:text-teal-600 transition border-b border-gray-100 pb-2">Personalized Care</a>
+                <a href="iv-room.html" class="text-[#003a4d] font-bold text-base hover:text-teal-600 transition border-b border-gray-100 pb-2">IV Room</a>
+                <a href="lyme-disease-care.html" class="text-[#003a4d] font-bold text-base hover:text-teal-600 transition border-b border-gray-100 pb-2">Lyme Disease Care</a>
+                
+                <!-- Therapies Dropdown -->
+                <div class="border-b border-gray-100 pb-2">
+                    <button class="text-[#003a4d] font-bold text-base hover:text-teal-600 transition w-full text-left flex justify-between items-center" onclick="event.stopPropagation(); document.getElementById('therapies-menu-list').classList.toggle('hidden')">
+                        Therapies <i class="fa-solid fa-chevron-down text-xs"></i>
+                    </button>
+                    <div id="therapies-menu-list" class="hidden flex-col space-y-3 mt-3 pl-4 border-l-2 border-teal-100 max-h-48 overflow-y-auto custom-scrollbar">
+                        <a href="faq.html" class="block text-sm text-[#003a4d] hover:text-teal-600 transition">FAQ</a>
+                        <a href="eboo.html" class="block text-sm text-[#003a4d] hover:text-teal-600 transition">EBOO</a>
+                        <a href="ebo2.html" class="block text-sm text-[#003a4d] hover:text-teal-600 transition">EBO2</a>
+                        <a href="ozone-therapy.html" class="block text-sm text-[#003a4d] hover:text-teal-600 transition">Ozone Therapy</a>
+                        <a href="ubi-therapy.html" class="block text-sm text-[#003a4d] hover:text-teal-600 transition">UBI Therapy</a>
+                        <a href="vitamin-c.html" class="block text-sm text-[#003a4d] hover:text-teal-600 transition">Vitamin C</a>
+                        <a href="myers-cocktail.html" class="block text-sm text-[#003a4d] hover:text-teal-600 transition">Myers Cocktail</a>
+                        <a href="flu-defense.html" class="block text-sm text-[#003a4d] hover:text-teal-600 transition">Flu Defense</a>
+                        <a href="vitality.html" class="block text-sm text-[#003a4d] hover:text-teal-600 transition">Vitality</a>
+                        <a href="glutathione.html" class="block text-sm text-[#003a4d] hover:text-teal-600 transition">Glutathione</a>
+                        <a href="egcg.html" class="block text-sm text-[#003a4d] hover:text-teal-600 transition">EGCG</a>
+                        <a href="migraine-defense.html" class="block text-sm text-[#003a4d] hover:text-teal-600 transition">Migraine Defense</a>
+                        <a href="chelation-therapy.html" class="block text-sm text-[#003a4d] hover:text-teal-600 transition">Chelation Therapy</a>
+                        <a href="ubi-with-ozone.html" class="block text-sm text-[#003a4d] hover:text-teal-600 transition">UBI with Ozone</a>
+                        <a href="5-pass-ozone.html" class="block text-sm text-[#003a4d] hover:text-teal-600 transition">5-Pass Ozone Therapy</a>
+                        <a href="iv-antibiotics.html" class="block text-sm text-[#003a4d] hover:text-teal-600 transition">IV Antibiotics</a>
+                        <a href="iv-iron.html" class="block text-sm text-[#003a4d] hover:text-teal-600 transition">IV Iron</a>
+                        <a href="silver-infusion.html" class="block text-sm text-[#003a4d] hover:text-teal-600 transition">Silver Infusion</a>
+                    </div>
+                </div>
+                <a href="about.html" class="text-[#003a4d] font-bold text-base hover:text-teal-600 transition border-b border-gray-100 pb-2">About</a>
+                <a href="team.html" class="text-[#003a4d] font-bold text-base hover:text-teal-600 transition border-b border-gray-100 pb-2">Meet Our Team</a>
+                <a href="testimonials.html" class="text-[#003a4d] font-bold text-base hover:text-teal-600 transition border-b border-gray-100 pb-2">Testimonials</a>
+                <a href="#contact-us" class="bg-teal-600 text-white text-center font-bold text-base py-2 rounded-xl hover:bg-teal-700 shadow-md transition mt-2">Book Now</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="flex-grow relative z-10 pb-24">
+        
+        <!-- Hero Background removed as requested -->
+
+        <div class="max-w-[1100px] mx-auto px-6 pt-16 md:pt-24 relative z-20">
+            
+            <!-- Hero Title -->
+            <div class="max-w-xl mb-12">
+                <h1 class="text-[3.5rem] md:text-[5rem] font-serif font-bold text-[#00657e] leading-[1.1] mb-4">
+                    Frequently<br>Asked Questions
+                </h1>
+                <p class="text-xl md:text-2xl text-[#334155] font-sans font-medium mb-6">
+                    Everything you need to know about<br class="hidden md:block">IV therapies at FLIMC.
+                </p>
+                <div class="flex items-center gap-4">
+                    <div class="h-[1.5px] w-24 bg-[#0F7A89]"></div>
+                    <i class="fa-solid fa-leaf text-[#0F7A89] text-lg"></i>
+                    <div class="h-[1.5px] w-12 md:w-48 bg-[#0F7A89]"></div>
+                </div>
+            </div>
+
+            <!-- FAQ Accordion List -->
+            <div class="space-y-4 max-w-4xl mx-auto md:mx-0">
+                
+                <!-- FAQ Item 1 -->
+                <div class="bg-white/95 backdrop-blur-sm rounded-2xl shadow-[0_4px_20px_rgba(184,226,233,0.5)] border border-white/50 overflow-hidden">
+                    <button class="faq-toggle w-full text-left p-6 md:p-8 flex items-start gap-6 hover:bg-[#f8fdfd] transition duration-300">
+                        <div class="w-16 h-16 rounded-full bg-[#00657e] flex items-center justify-center shrink-0 shadow-lg border-[3px] border-white relative mt-[-4px]">
+                            <div class="absolute -inset-1 rounded-full border border-[#00657e]/20 pointer-events-none"></div>
+                            <i class="fa-solid fa-droplet text-white text-2xl"></i>
+                        </div>
+                        <div class="flex-grow pt-1">
+                            <h3 class="text-[#008ba6] font-bold text-lg md:text-xl mb-2 flex justify-between items-center w-full">
+                                What are IV therapies?
+                                <i class="fa-solid fa-chevron-down text-[#00657e] text-xl transition-transform duration-300 faq-icon"></i>
+                            </h3>
+                            <div class="faq-content hidden text-[#0f172a] font-medium text-sm leading-relaxed max-w-2xl">
+                                IV therapies deliver fluids, vitamins, minerals, and other nutrients directly into the bloodstream for efficient absorption. At FLIMC, IV therapies are tailored to support hydration, nutrient replenishment, and overall wellness.
+                            </div>
+                        </div>
+                    </button>
+                </div>
+                
+                <!-- FAQ Item 2 -->
+                <div class="bg-white/95 backdrop-blur-sm rounded-2xl shadow-[0_4px_20px_rgba(184,226,233,0.5)] border border-white/50 overflow-hidden">
+                    <button class="faq-toggle w-full text-left p-6 md:p-8 flex items-start gap-6 hover:bg-[#f8fdfd] transition duration-300">
+                        <div class="w-16 h-16 rounded-full bg-[#00657e] flex items-center justify-center shrink-0 shadow-lg border-[3px] border-white relative mt-[-4px]">
+                            <div class="absolute -inset-1 rounded-full border border-[#00657e]/20 pointer-events-none"></div>
+                            <i class="fa-solid fa-prescription-bottle-medical text-white text-2xl"></i>
+                        </div>
+                        <div class="flex-grow pt-1">
+                            <h3 class="text-[#008ba6] font-bold text-lg md:text-xl mb-2 flex justify-between items-center w-full">
+                                What IV therapies does FLIMC offer?
+                                <i class="fa-solid fa-chevron-down text-[#00657e] text-xl transition-transform duration-300 faq-icon"></i>
+                            </h3>
+                            <div class="faq-content hidden text-[#0f172a] font-medium text-sm leading-relaxed max-w-2xl">
+                                FLIMC offers a wide range of IV and injectable services, including Vitamin C, Myers Cocktail, Flu Defense, Vitality, Glutathione, NAD+, EGCG, Migraine Defense, Chelation Therapy, EBOO, UBI, UBI with Ozone, 5-Pass Ozone Therapy, IV Antibiotics, IV Iron, and Silver Infusion.
+                            </div>
+                        </div>
+                    </button>
+                </div>
+                
+                <!-- FAQ Item 3 -->
+                <div class="bg-white/95 backdrop-blur-sm rounded-2xl shadow-[0_4px_20px_rgba(184,226,233,0.5)] border border-white/50 overflow-hidden">
+                    <button class="faq-toggle w-full text-left p-6 md:p-8 flex items-start gap-6 hover:bg-[#f8fdfd] transition duration-300">
+                        <div class="w-16 h-16 rounded-full bg-[#00657e] flex items-center justify-center shrink-0 shadow-lg border-[3px] border-white relative mt-[-4px]">
+                            <div class="absolute -inset-1 rounded-full border border-[#00657e]/20 pointer-events-none"></div>
+                            <i class="fa-regular fa-user text-white text-2xl"></i>
+                        </div>
+                        <div class="flex-grow pt-1">
+                            <h3 class="text-[#008ba6] font-bold text-lg md:text-xl mb-2 flex justify-between items-center w-full">
+                                How do I know which IV therapy is right for me?
+                                <i class="fa-solid fa-chevron-down text-[#00657e] text-xl transition-transform duration-300 faq-icon"></i>
+                            </h3>
+                            <div class="faq-content hidden text-[#0f172a] font-medium text-sm leading-relaxed max-w-2xl">
+                                Your IV therapy recommendations should be based on your individual health needs, wellness goals, and clinical evaluation. FLIMC offers personalized infusion support designed around the patient.
+                            </div>
+                        </div>
+                    </button>
+                </div>
+                
+                <!-- FAQ Item 4 -->
+                <div class="bg-white/95 backdrop-blur-sm rounded-2xl shadow-[0_4px_20px_rgba(184,226,233,0.5)] border border-white/50 overflow-hidden">
+                    <button class="faq-toggle w-full text-left p-6 md:p-8 flex items-start gap-6 hover:bg-[#f8fdfd] transition duration-300">
+                        <div class="w-16 h-16 rounded-full bg-[#00657e] flex items-center justify-center shrink-0 shadow-lg border-[3px] border-white relative mt-[-4px]">
+                            <div class="absolute -inset-1 rounded-full border border-[#00657e]/20 pointer-events-none"></div>
+                            <i class="fa-regular fa-heart text-white text-2xl"></i>
+                        </div>
+                        <div class="flex-grow pt-1">
+                            <h3 class="text-[#008ba6] font-bold text-lg md:text-xl mb-2 flex justify-between items-center w-full">
+                                What are IV therapies used for?
+                                <i class="fa-solid fa-chevron-down text-[#00657e] text-xl transition-transform duration-300 faq-icon"></i>
+                            </h3>
+                            <div class="faq-content hidden text-[#0f172a] font-medium text-sm leading-relaxed max-w-2xl">
+                                Depending on the formulation, IV therapies may be used to support hydration, energy, immune health, recovery, nutrient replenishment, and overall well-being. FLIMC also offers therapies intended to support detoxification, brain health, and recovery under medical guidance.
+                            </div>
+                        </div>
+                    </button>
+                </div>
+                
+                <!-- FAQ Item 5 -->
+                <div class="bg-white/95 backdrop-blur-sm rounded-2xl shadow-[0_4px_20px_rgba(184,226,233,0.5)] border border-white/50 overflow-hidden">
+                    <button class="faq-toggle w-full text-left p-6 md:p-8 flex items-start gap-6 hover:bg-[#f8fdfd] transition duration-300">
+                        <div class="w-16 h-16 rounded-full bg-[#00657e] flex items-center justify-center shrink-0 shadow-lg border-[3px] border-white relative mt-[-4px]">
+                            <div class="absolute -inset-1 rounded-full border border-[#00657e]/20 pointer-events-none"></div>
+                            <i class="fa-solid fa-shield-halved text-white text-2xl"></i>
+                        </div>
+                        <div class="flex-grow pt-1">
+                            <h3 class="text-[#008ba6] font-bold text-lg md:text-xl mb-2 flex justify-between items-center w-full">
+                                Is IV therapy safe?
+                                <i class="fa-solid fa-chevron-down text-[#00657e] text-xl transition-transform duration-300 faq-icon"></i>
+                            </h3>
+                            <div class="faq-content hidden text-[#0f172a] font-medium text-sm leading-relaxed max-w-2xl">
+                                IV therapy should be administered under trained medical supervision and guided by individual evaluation. Some therapies offered by FLIMC, such as chelation therapy, are specifically noted as being offered only under medical supervision.
+                            </div>
+                        </div>
+                    </button>
+                </div>
+                
+                <!-- FAQ Item 6 -->
+                <div class="bg-white/95 backdrop-blur-sm rounded-2xl shadow-[0_4px_20px_rgba(184,226,233,0.5)] border border-white/50 overflow-hidden">
+                    <button class="faq-toggle w-full text-left p-6 md:p-8 flex items-start gap-6 hover:bg-[#f8fdfd] transition duration-300">
+                        <div class="w-16 h-16 rounded-full bg-[#00657e] flex items-center justify-center shrink-0 shadow-lg border-[3px] border-white relative mt-[-4px]">
+                            <div class="absolute -inset-1 rounded-full border border-[#00657e]/20 pointer-events-none"></div>
+                            <i class="fa-solid fa-network-wired text-white text-2xl"></i>
+                        </div>
+                        <div class="flex-grow pt-1">
+                            <h3 class="text-[#008ba6] font-bold text-lg md:text-xl mb-2 flex justify-between items-center w-full">
+                                Does FLIMC offer advanced infusion therapies?
+                                <i class="fa-solid fa-chevron-down text-[#00657e] text-xl transition-transform duration-300 faq-icon"></i>
+                            </h3>
+                            <div class="faq-content hidden text-[#0f172a] font-medium text-sm leading-relaxed max-w-2xl">
+                                Yes. FLIMC offers advanced therapies such as EBOO, 5-Pass Ozone Therapy, UBI, and UBI with Ozone, along with a variety of nutrient and medical IV options.
+                            </div>
+                        </div>
+                    </button>
+                </div>
+                
+                <!-- FAQ Item 7 -->
+                <div class="bg-white/95 backdrop-blur-sm rounded-2xl shadow-[0_4px_20px_rgba(184,226,233,0.5)] border border-white/50 overflow-hidden">
+                    <button class="faq-toggle w-full text-left p-6 md:p-8 flex items-start gap-6 hover:bg-[#f8fdfd] transition duration-300">
+                        <div class="w-16 h-16 rounded-full bg-[#00657e] flex items-center justify-center shrink-0 shadow-lg border-[3px] border-white relative mt-[-4px]">
+                            <div class="absolute -inset-1 rounded-full border border-[#00657e]/20 pointer-events-none"></div>
+                            <i class="fa-regular fa-calendar text-white text-2xl"></i>
+                        </div>
+                        <div class="flex-grow pt-1">
+                            <h3 class="text-[#008ba6] font-bold text-lg md:text-xl mb-2 flex justify-between items-center w-full">
+                                How do I schedule IV therapy at FLIMC?
+                                <i class="fa-solid fa-chevron-down text-[#00657e] text-xl transition-transform duration-300 faq-icon"></i>
+                            </h3>
+                            <div class="faq-content hidden text-[#0f172a] font-medium text-sm leading-relaxed max-w-2xl">
+                                You can schedule by calling FLIMC at (941) 955-6220 or by requesting an appointment through the website.
+                            </div>
+                        </div>
+                    </button>
+                </div>
+                
+            </div>
+        </div>
+        
+        <!-- Bottom Right Corner Leaf/Lotus Graphic -->
+        <div class="absolute bottom-0 right-0 z-0 pointer-events-none opacity-50 drop-shadow-xl text-teal-800 hidden md:block">
+            <i class="fa-solid fa-seedling text-[15rem] translate-y-12 translate-x-12"></i>
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-teal-700 pt-16 pb-2 relative z-20 text-white" id="contact-us">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center">
+            <!-- Logo -->
+            <img src="logow.png" alt="FLIMC Logo" class="h-40 w-auto object-contain mb-10 hover:scale-105 transition duration-300 drop-shadow-md">
+            
+            <!-- Social Icons -->
+            <div class="flex space-x-4 mb-6">
+                <a href="https://www.facebook.com/FLIMC/" target="_blank" rel="noopener noreferrer" class="bg-white/10 text-white rounded-full w-10 h-10 flex items-center justify-center hover:bg-white/20 transition">
+                    <i class="fa-brands fa-facebook-f"></i>
+                </a>
+                <a href="https://www.instagram.com/flimcsarasota/" target="_blank" rel="noopener noreferrer" class="bg-white/10 text-white rounded-full w-10 h-10 flex items-center justify-center hover:bg-white/20 transition">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+            </div>
+
+            <!-- Contact Text -->
+            <p class="text-white text-xl font-medium mb-12 text-center">Have a question? Reach out to our team for an answer!</p>
+
+            <!-- Contact & Location -->
+            <div class="flex flex-col md:flex-row justify-center w-full gap-12 md:gap-32 text-center text-teal-50 mb-16">
+                <div>
+                    <p class="text-2xl font-black mb-2">(941) 955-6220</p>
+                    <p class="text-2xl font-black">Info@flimc.com</p>
+                </div>
+                <div>
+                    <p class="font-bold text-lg mb-1">Office Location</p>
+                    <p class="text-teal-100 text-lg">2415 University Pkwy,<br>Sarasota, FL 34243</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Copyright -->
+        <div class="border-t border-teal-600 pt-4 text-center text-teal-200 text-xs font-medium w-full mt-2 pb-2">
+            Copyright © 2026 flimc | <a href="#" class="hover:underline text-teal-100">Privacy Policy</a> | <a href="#" class="hover:underline text-teal-100">Terms & Conditions</a>
+        </div>
+    </footer>
+
+    <!-- Accordion Script -->
+    <script>
+        document.querySelectorAll('.faq-toggle').forEach(button => {
+            button.addEventListener('click', () => {
+                const content = button.querySelector('.faq-content');
+                const icon = button.querySelector('.faq-icon');
+                
+                if (content.classList.contains('hidden')) {
+                    // Open
+                    content.classList.remove('hidden');
+                    icon.classList.add('rotate-180');
+                    button.classList.add('bg-[#f4fbfc]');
+                } else {
+                    // Close
+                    content.classList.add('hidden');
+                    icon.classList.remove('rotate-180');
+                    button.classList.remove('bg-[#f4fbfc]');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
