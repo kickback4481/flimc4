@@ -11,6 +11,19 @@
         tailwind.config = {
             theme: {
                 extend: {
+                    colors: {
+                        teal: {
+                            500: '#007f9c',
+                            600: '#00657e',
+                            700: '#004c5f',
+                        },
+                        blue: {
+                            50: '#f0f9fa',
+                            100: '#e0f3f6',
+                            800: '#005b76',
+                            900: '#003a4d',
+                        }
+                    },
                     fontFamily: {
                         sans: ['Outfit', 'sans-serif'],
                         inter: ['Inter', 'sans-serif'],
@@ -76,6 +89,7 @@
                         <a href="silver-infusion.html" class="block text-sm text-[#003a4d] hover:text-teal-600 transition">Silver Infusion</a>
                     </div>
                 </div>
+                <a href="https://flimc.myshopify.com/" target="_blank" rel="noopener noreferrer" class="text-[#003a4d] font-bold text-base hover:text-teal-600 transition border-b border-gray-100 pb-2">Supplements</a>
                 <a href="about.html" class="text-[#003a4d] font-bold text-base hover:text-teal-600 transition border-b border-gray-100 pb-2">About</a>
                 <a href="team.html" class="text-[#003a4d] font-bold text-base hover:text-teal-600 transition border-b border-gray-100 pb-2">Meet Our Team</a>
                 <a href="testimonials.html" class="text-[#003a4d] font-bold text-base hover:text-teal-600 transition border-b border-gray-100 pb-2">Testimonials</a>
@@ -268,7 +282,8 @@
     <footer class="bg-teal-700 pt-16 pb-2 mt-auto relative z-20 text-white" id="contact-us">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center">
             <!-- Logo -->
-            <img src="logow.png" alt="FLIMC Logo" class="h-40 w-auto object-contain mb-10 hover:scale-105 transition duration-300 drop-shadow-md">
+            <img src="logow.png" alt="FLIMC Logo" class="h-40 w-auto object-contain mb-4 hover:scale-105 transition duration-300 drop-shadow-md">
+            <h3 class="md:hidden text-center text-white font-serif tracking-widest text-sm font-medium mb-10 px-4">FLORIDA INTEGRATIVE<br>MEDICAL CENTER</h3>
             
             <!-- Social Icons -->
             <div class="flex space-x-4 mb-6">
