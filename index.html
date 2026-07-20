@@ -97,7 +97,7 @@
         }
     </style>
 </head>
-<body class="overflow-x-hidden font-sans text-gray-800 antialiased relative min-h-screen">
+<body class="overflow-x-hidden font-sans text-gray-800 antialiased relative flex flex-col min-h-screen">
 
     <!-- Decorative Background Elements -->
     <div class="absolute inset-0 overflow-hidden pointer-events-none -z-10">
@@ -228,58 +228,58 @@
             <h2 class="px-8 text-teal-700 font-serif text-2xl md:text-3xl font-bold tracking-[0.15em]">FEATURED THERAPIES</h2>
             <div class="flex-grow border-t-2 border-teal-600/30"></div>
         </div>
-        <div class="relative flex items-center justify-center px-12 mt-12 w-full group">
+        <div class="relative flex items-center justify-center px-2 md:px-12 mt-12 w-full group">
             <!-- Left Arrow -->
-            <button class="absolute left-0 w-10 h-10 rounded-full bg-teal-600 text-white flex items-center justify-center hover:bg-teal-700 shadow-lg z-10 transition hover:scale-110" onclick="prevCarousel('therapies-scroll', 200)">
+            <button id="therapies-prev-arrow" class="absolute left-2 md:left-0 w-10 h-10 rounded-full bg-teal-600/80 md:bg-teal-600 text-white flex items-center justify-center hover:bg-teal-700 shadow-lg z-30 transition-all duration-300 hover:scale-110 opacity-0 md:opacity-100 pointer-events-none md:pointer-events-auto" onclick="prevCarousel('therapies-scroll', 200)">
                 <i class="fa-solid fa-chevron-left"></i>
             </button>
 
             <!-- Carousel Items -->
             <div id="therapies-scroll" class="grid [grid-template-areas:'stack'] md:flex overflow-hidden md:overflow-x-auto snap-none md:snap-x md:snap-mandatory gap-4 w-full py-4 md:scroll-smooth" style="scrollbar-width: none; -ms-overflow-style: none;">
                 <!-- Therapy 1 -->
-                <div class="min-w-[160px] md:min-w-[180px] snap-center bg-gradient-to-b from-white to-blue-50/50 border border-white/60 rounded-2xl p-4 flex flex-col items-center shadow-soft hover:-translate-y-1 transition duration-300">
+                <div class="w-full max-w-[260px] md:w-auto md:min-w-[180px] snap-center bg-gradient-to-b from-white to-blue-50/50 border border-white/60 rounded-2xl p-4 flex flex-col items-center shadow-soft hover:-translate-y-1 transition duration-300">
                     <img src="Photo with Gold Outline-01.jpg" onerror="this.src='vitamin-c.html'" class="w-full h-32 rounded-xl object-contain mb-4 shadow-sm">
                     <h4 class="text-teal-700 font-bold text-[11px] leading-tight mb-2 h-8 flex items-center justify-center">VITAMIN C<br>IV THERAPY</h4>
                     <a href="vitamin-c.html" class="text-teal-500 text-[10px] font-bold hover:text-teal-700 tracking-wider">LEARN MORE &rarr;</a>
                 </div>
                 <!-- Therapy 2 -->
-                <div class="min-w-[160px] md:min-w-[180px] snap-center bg-gradient-to-b from-white to-blue-50/50 border border-white/60 rounded-2xl p-4 flex flex-col items-center shadow-soft hover:-translate-y-1 transition duration-300">
+                <div class="w-full max-w-[260px] md:w-auto md:min-w-[180px] snap-center bg-gradient-to-b from-white to-blue-50/50 border border-white/60 rounded-2xl p-4 flex flex-col items-center shadow-soft hover:-translate-y-1 transition duration-300">
                     <img src="Photo with Gold Outline-02.jpg" onerror="this.src='myers-cocktail.html'" class="w-full h-32 rounded-xl object-contain mb-4 shadow-sm">
                     <h4 class="text-teal-700 font-bold text-[11px] leading-tight mb-2 h-8 flex items-center justify-center">MYERS<br>COCKTAIL</h4>
                     <a href="myers-cocktail.html" class="text-teal-500 text-[10px] font-bold hover:text-teal-700 tracking-wider">LEARN MORE &rarr;</a>
                 </div>
                 <!-- Therapy 3 -->
-                <div class="min-w-[160px] md:min-w-[180px] snap-center bg-gradient-to-b from-white to-blue-50/50 border border-white/60 rounded-2xl p-4 flex flex-col items-center shadow-soft hover:-translate-y-1 transition duration-300">
+                <div class="w-full max-w-[260px] md:w-auto md:min-w-[180px] snap-center bg-gradient-to-b from-white to-blue-50/50 border border-white/60 rounded-2xl p-4 flex flex-col items-center shadow-soft hover:-translate-y-1 transition duration-300">
                     <img src="Photo with Gold Outline-03.jpg" onerror="this.src='nad.html'" class="w-full h-32 rounded-xl object-contain mb-4 shadow-sm">
                     <h4 class="text-teal-700 font-bold text-[11px] leading-tight mb-2 h-8 flex items-center justify-center">NAD+<br>THERAPY</h4>
                     <a href="nad.html" class="text-teal-500 text-[10px] font-bold hover:text-teal-700 tracking-wider">LEARN MORE &rarr;</a>
                 </div>
                 <!-- Therapy 4 -->
-                <div class="min-w-[160px] md:min-w-[180px] snap-center bg-gradient-to-b from-white to-blue-50/50 border border-white/60 rounded-2xl p-4 flex flex-col items-center shadow-soft hover:-translate-y-1 transition duration-300">
+                <div class="w-full max-w-[260px] md:w-auto md:min-w-[180px] snap-center bg-gradient-to-b from-white to-blue-50/50 border border-white/60 rounded-2xl p-4 flex flex-col items-center shadow-soft hover:-translate-y-1 transition duration-300">
                     <img src="Photo with Gold Outline-04.jpg" onerror="this.src='glutathione.html'" class="w-full h-32 rounded-xl object-contain mb-4 shadow-sm">
                     <h4 class="text-teal-700 font-bold text-[11px] leading-tight mb-2 h-8 flex items-center justify-center">GLUTATHIONE<br>IV THERAPY</h4>
                     <a href="glutathione.html" class="text-teal-500 text-[10px] font-bold hover:text-teal-700 tracking-wider">LEARN MORE &rarr;</a>
                 </div>
                 <!-- Therapy 5 -->
-                <div class="min-w-[160px] md:min-w-[180px] snap-center bg-gradient-to-b from-white to-blue-50/50 border border-white/60 rounded-2xl p-4 flex flex-col items-center shadow-soft hover:-translate-y-1 transition duration-300">
+                <div class="w-full max-w-[260px] md:w-auto md:min-w-[180px] snap-center bg-gradient-to-b from-white to-blue-50/50 border border-white/60 rounded-2xl p-4 flex flex-col items-center shadow-soft hover:-translate-y-1 transition duration-300">
                     <img src="Photo with Gold Outline-09.jpg" onerror="this.src='eboo.html'" class="w-full h-32 rounded-xl object-contain mb-4 shadow-sm">
                     <h4 class="text-teal-700 font-bold text-[11px] leading-tight mb-2 h-8 flex items-center justify-center">EBOO<br>THERAPY</h4>
                     <a href="eboo.html" class="text-teal-500 text-[10px] font-bold hover:text-teal-700 tracking-wider">LEARN MORE &rarr;</a>
                 </div>
                 <!-- Therapy 6 -->
-                <div class="min-w-[160px] md:min-w-[180px] snap-center bg-gradient-to-b from-white to-blue-50/50 border border-white/60 rounded-2xl p-4 flex flex-col items-center shadow-soft hover:-translate-y-1 transition duration-300">
+                <div class="w-full max-w-[260px] md:w-auto md:min-w-[180px] snap-center bg-gradient-to-b from-white to-blue-50/50 border border-white/60 rounded-2xl p-4 flex flex-col items-center shadow-soft hover:-translate-y-1 transition duration-300">
                     <img src="Photo with Gold Outline-12.jpg" onerror="this.src='ubi-therapy.html'" class="w-full h-32 rounded-xl object-contain mb-4 shadow-sm">
                     <h4 class="text-teal-700 font-bold text-[11px] leading-tight mb-2 h-8 flex items-center justify-center">UBI<br>THERAPY</h4>
                     <a href="ubi-therapy.html" class="text-teal-500 text-[10px] font-bold hover:text-teal-700 tracking-wider">LEARN MORE &rarr;</a>
                 </div>
                 <!-- Therapy 7 -->
-                <div class="min-w-[160px] md:min-w-[180px] snap-center bg-gradient-to-b from-white to-blue-50/50 border border-white/60 rounded-2xl p-4 flex flex-col items-center shadow-soft hover:-translate-y-1 transition duration-300">
+                <div class="w-full max-w-[260px] md:w-auto md:min-w-[180px] snap-center bg-gradient-to-b from-white to-blue-50/50 border border-white/60 rounded-2xl p-4 flex flex-col items-center shadow-soft hover:-translate-y-1 transition duration-300">
                     <img src="hydrogen peroxide iv.png" onerror="this.src='iv-infusion.png'" class="w-full h-32 rounded-xl object-contain mb-4 shadow-sm">
                     <h4 class="text-teal-700 font-bold text-[11px] leading-tight mb-2 h-8 flex items-center justify-center">HYDROGEN<br>PEROXIDE IV</h4>
                     <a href="silver-infusion.html" class="text-teal-500 text-[10px] font-bold hover:text-teal-700 tracking-wider">LEARN MORE &rarr;</a>
                 </div>
                 <!-- Therapy 8 -->
-                <div class="min-w-[160px] md:min-w-[180px] snap-center bg-gradient-to-b from-white to-blue-50/50 border border-white/60 rounded-2xl p-4 flex flex-col items-center shadow-soft hover:-translate-y-1 transition duration-300">
+                <div class="w-full max-w-[260px] md:w-auto md:min-w-[180px] snap-center bg-gradient-to-b from-white to-blue-50/50 border border-white/60 rounded-2xl p-4 flex flex-col items-center shadow-soft hover:-translate-y-1 transition duration-300">
                     <img src="Photo with Gold Outline-06.jpg" onerror="this.src='ozone-therapy.png'" class="w-full h-32 rounded-xl object-contain mb-4 shadow-sm">
                     <h4 class="text-teal-700 font-bold text-[11px] leading-tight mb-2 h-8 flex items-center justify-center">OZONE<br>THERAPY</h4>
                     <a href="ozone-therapy.html" class="text-teal-500 text-[10px] font-bold hover:text-teal-700 tracking-wider">LEARN MORE &rarr;</a>
@@ -287,7 +287,7 @@
             </div>
 
             <!-- Right Arrow -->
-            <button class="absolute right-0 w-10 h-10 rounded-full bg-teal-600 text-white flex items-center justify-center hover:bg-teal-700 shadow-lg z-10 transition hover:scale-110" onclick="nextCarousel('therapies-scroll', 200)">
+            <button id="therapies-next-arrow" class="absolute right-2 md:right-0 w-10 h-10 rounded-full bg-teal-600/80 md:bg-teal-600 text-white flex items-center justify-center hover:bg-teal-700 shadow-lg z-30 transition-all duration-300 hover:scale-110 opacity-0 md:opacity-100 pointer-events-none md:pointer-events-auto" onclick="nextCarousel('therapies-scroll', 200)">
                 <i class="fa-solid fa-chevron-right"></i>
             </button>
         </div>
@@ -517,6 +517,26 @@
         // Store current index for fade sliders
         window.carouselIndices = {};
 
+        function flashArrows(containerId) {
+            if (window.innerWidth >= 768) return;
+            const prev = document.getElementById(containerId.replace('-scroll', '-prev-arrow'));
+            const next = document.getElementById(containerId.replace('-scroll', '-next-arrow'));
+            if(prev && next) {
+                prev.classList.remove('opacity-0', 'pointer-events-none');
+                next.classList.remove('opacity-0', 'pointer-events-none');
+                prev.classList.add('opacity-100', 'pointer-events-auto');
+                next.classList.add('opacity-100', 'pointer-events-auto');
+                
+                clearTimeout(window[`fadeTimer_${containerId}`]);
+                window[`fadeTimer_${containerId}`] = setTimeout(() => {
+                    prev.classList.remove('opacity-100', 'pointer-events-auto');
+                    next.classList.remove('opacity-100', 'pointer-events-auto');
+                    prev.classList.add('opacity-0', 'pointer-events-none');
+                    next.classList.add('opacity-0', 'pointer-events-none');
+                }, 2000);
+            }
+        }
+
         function nextCarousel(containerId, scrollAmount) {
             const container = document.getElementById(containerId);
             if (!container) return;
@@ -533,6 +553,7 @@
                 
                 items[currentIndex].classList.remove('opacity-0', 'z-0', 'pointer-events-none');
                 items[currentIndex].classList.add('opacity-100', 'z-10', 'pointer-events-auto');
+                flashArrows(containerId);
             } else {
                 // Desktop scroll
                 if (container.scrollLeft + container.clientWidth >= container.scrollWidth - 10) {
@@ -559,6 +580,7 @@
                 
                 items[currentIndex].classList.remove('opacity-0', 'z-0', 'pointer-events-none');
                 items[currentIndex].classList.add('opacity-100', 'z-10', 'pointer-events-auto');
+                flashArrows(containerId);
             } else {
                 container.scrollBy({left: -scrollAmount, behavior: 'smooth'});
             }
